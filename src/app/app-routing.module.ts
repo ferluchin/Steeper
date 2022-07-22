@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DatosGeneralesComponent } from './pages/datos-generales/datos-generales.component';
 import { InformacionGeneralComponent } from './pages/informacion-general/informacion-general.component';
 import { InformacionTecnicaProyectoComponent } from './pages/informacion-tecnica-proyecto/informacion-tecnica-proyecto.component';
 import { MetodologiaProyectoComponent } from './pages/metodologia-proyecto/metodologia-proyecto.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'metodologia-proyecto', component: MetodologiaProyectoComponent },
   { path: 'informacion-tecnica-proyecto', component: InformacionTecnicaProyectoComponent },
   { path: 'resumen-presupuesto', component: ResumenPresupuestoComponent },
+  { path: 'datos-generales', component: DatosGeneralesComponent },
 
 ];
 

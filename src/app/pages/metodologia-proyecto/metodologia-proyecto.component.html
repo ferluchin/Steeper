@@ -1,6 +1,5 @@
 <div class="metodologia-proyecto">
   <div class="main-body">
-
     <!-- <Split
                     sizes={[20, 80]}
                     direction="horizontal"
@@ -17,9 +16,7 @@
         <app-sidebar></app-sidebar>
       </as-split-area>
       <as-split-area [size]="80">
-
             <app-titlebar></app-titlebar> -->
-
     <!-- <TitleBar />
                             {/* <NavBar /> */} -->
     <section>
@@ -27,25 +24,25 @@
         <Button type="button" onClick={logeoDatos} class="btn btn-primary">
           Consola
         </Button>
-
         <div class="container">
-
           <div class="row">
             <div class="col-4">
               <h4> 2.6 Metodología</h4>
 
             </div>
-            <div class="col-8">
-              <textarea
+            <mat-form-field>
+              <textarea required matIniput
                 placeholder="Describir de manera sintética los métodos y técnicas necesarias para alcanzar sus objetivos"
-                onChange={handleChange} name="metodologia">
-                                        </textarea>
-            </div>
+                onChange={handleChange} name="metodologia" formControlName="metodologiaCtrl">
+                                          </textarea>
+
+            </mat-form-field>
+
           </div>
 
 
           <br />
-          <div class="row">
+          <div class=" row">
             <div class="col-6">
               <h4>
                 2.7 Transferecia de conocimiento
@@ -64,7 +61,8 @@
             <mat-form-field appearance="fill">
               <mat-label>Identificación</mat-label>
 
-              <mat-select id="articuloCientifico" onChange={handleChange} name="articuloCientifico" class="form-select">
+              <mat-select id="articuloCientifico" onChange={handleChange} name="articuloCientifico" class="form-select"
+                formControlName="articuloCientificoCtrl">
                 <mat-option value="">-- Elija un Elemento --</mat-option>
                 <mat-option value="SI">SI</mat-option>
                 <mat-option value="NO">NO</mat-option>
@@ -209,29 +207,32 @@
               <h4> 2.9 Descripción de Actividad I+D</h4>
 
             </div>
-            <div class="col-8">
-              <textarea matInput required name="descripcionActividadID" placeholder="Descripción de la actividad" onChange={handleChange}>
-                                    </textarea>
-            </div>
-          </div>
-
-          <br />
-          <div class="row">
-            <div class="col-4">
-              <h4> 2.10 Aspectos Bioéticos</h4>
-
-            </div>
-            <div class="col-8">
-              <textarea matInput required name="aspectosBioeticos" placeholder="Su proyecto requiere aprobación de un comité de bioética"
+            <mat-form-field>
+              <textarea matInput required name="descripcionActividadID" placeholder="Descripción de la actividad"
                 onChange={handleChange}>
-                                    </textarea>
-            </div>
+                                      </textarea>
+
+            </mat-form-field>
+
           </div>
-
-
-          <br />
         </div>
 
+        <br />
+        <div class="row">
+          <div class="col-4">
+            <h4> 2.10 Aspectos Bioéticos</h4>
+
+          </div>
+          <div class="col-8">
+
+            <mat-form-field>
+              <textarea matInput required name="aspectosBioeticos"
+                placeholder="Su proyecto requiere aprobación de un comité de bioética" onChange={handleChange}>
+                                            </textarea>
+            </mat-form-field>
+          </div>
+        </div>
+        <br />
         <button class="btn btn-primary">
           Enviar Información
         </button>

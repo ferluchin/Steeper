@@ -2,180 +2,60 @@
   {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
 </button>
 <mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
+  <!-- INFORMACION GENERAL -->
   <mat-step [stepControl]="informacionGeneralFormGroup">
-    <form [formGroup]="informacionGeneralFormGroup">
-      <ng-template matStepLabel>Ingresa Datos Generales</ng-template>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-4">
-            <mat-form-field appearance="fill">
-              <mat-label>Título</mat-label>
-              <input matInput placeholder="Título del Proyecto" formControlName="tituloCtrl" required>
-            </mat-form-field>
-          </div>
-
-          <div class="col-4">
-            <mat-form-field appearance="fill">
-              <mat-label>Facultad</mat-label>
-              <!-- <input matInput placeholder="Facultad" formControlName="tituloCtrl" required> -->
-              <mat-select id="facultad" value=formData.facultad onChange=handleChange name="facultad"
-                class="form-select">
-                <mat-option value="">-- Elija un Elemento --</mat-option>
-                <mat-option value="Ciencias Económicas y Empresariales">Ciencias Económicas y Empresariales</mat-option>
-                <mat-option value="Ciencias de la Salud">Ciencias de la Salud</mat-option>
-                <mat-option value="Ciencias Exactas y Naturales">Ciencias Exactas y Naturales</mat-option>
-                <mat-option value="Ingenierías y Arquitectura">Ingenierías y Arquitectura</mat-option>
-                <mat-option value="Ciencias Sociales, Educación y Humanidades">Ciencias Sociales, Educación y
-                  Humanidades</mat-option>
-
-              </mat-select>
-            </mat-form-field>
-          </div>
-          <div class="col-4">
-            <mat-form-field appearance="fill">
-              <mat-label>Departamento</mat-label>
-
-              <!-- <input matInput placeholder="Departamento" formControlName="departamentoCtrl" required> -->
-              <mat-select id="departamento" value=formData.departamento onChange=handleChange name="departamento"
-                class="form-select">
-                <mat-option value="">-- Elija un Elemento --</mat-option>
-                <mat-option value="Química">Química</mat-option>
-                <mat-option value="Geociencias">Geociencias</mat-option>
-                <mat-option value="Ciencias de la Salud">Ciencias de la Salud</mat-option>
-                <mat-option value="Economía">Economía</mat-option>
-                <mat-option value="Ciencias Empresariales.">Ciencias Empresariales.</mat-option>
-                <mat-option value="Ingeniería Civil.">Ingeniería Civil.</mat-option>
-                <mat-option value="Arquitectura y Urbanismo.">Arquitectura y Urbanismo.</mat-option>
-                <mat-option value="Ciencias de la Computación y Telecomunicaciones.">Ciencias de la Computación y
-                  Telecomunicaciones.</mat-option>
-                <mat-option value="Ciencias Biológicas y Agropecuarias.">Ciencias Biológicas y Agropecuarias.
-                </mat-option>
-                <mat-option value="Producción.">Producción.</mat-option>
-                <mat-option value="Ciencias de la Educación">Ciencias de la Educación.</mat-option>
-                <mat-option value="Ciencias de la Comunicación">Ciencias de la Comunicación.</mat-option>
-                <mat-option value="Filosofía, Artes y Humanidades">Filosofía, Artes y Humanidades.</mat-option>
-                <mat-option value="Psicología">Psicología.</mat-option>
-                <mat-option value="Ciencias Jurídicas">Ciencias Jurídicas.</mat-option>
-              </mat-select>
-            </mat-form-field>
-          </div>
 
 
-        </div>
-        <div class="row">
-          <div class="col-4">
-            <mat-form-field appearance="fill">
-              <mat-label>Fecha de Inicio</mat-label>
-              <input matInput [matDatepicker]="picker1">
-              <mat-hint>MM/DD/YYYY</mat-hint>
-              <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-              <mat-datepicker touchUi #picker1></mat-datepicker>
-            </mat-form-field>
+    <mat-tab-group mat-align-tabs="center">
+      <mat-tab label="Datos Informativos">
+        Datos Informativos
+    <app-datos-generales>
 
-          </div>
-          <div class="col-4">
-            <mat-form-field appearance="fill">
-              <mat-label>Fecha Finalización</mat-label>
-              <input matInput [matDatepicker]="picker2">
-              <mat-hint>MM/DD/YYYY</mat-hint>
-              <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-              <mat-datepicker touchUi #picker2></mat-datepicker>
-            </mat-form-field>
-          </div>
+    </app-datos-generales>
+      </mat-tab>
+      <mat-tab label="Áreas Conocimiento">
+        Áreas Conocimiento
+        <app-areas-conocimiento></app-areas-conocimiento>
 
-          <div class="col-4">
-            <mat-form-field appearance="fill">
-              <mat-label>Duración del Proyecto en Semanas</mat-label>
+      </mat-tab>
 
-              <input matInput type="number" placeholder="0" formControlName="duracionSemanasCtrl">
-            </mat-form-field>
-          </div>
+      <mat-tab label="Personal Interno">
+        Equipo del Proyecto
+        Personal Interno
 
-        </div>
-        <div class="row">
-
-          <mat-form-field class="full-width" appearance="fill">
-            <mat-label>Alcance territorial</mat-label>
-            <mat-select id="alcanceTerritorial" value=formData.alcanceTerritorial onChange=handleChange
-              name="alcanceTerritorial" class="form-select">
-              <mat-option value="">-- Elija un Elemento --</mat-option>
-              <mat-option value="Nacional.">Nacional.</mat-option>
-              <mat-option value="Provincial.">Provincial.</mat-option>
-              <mat-option value="Cantonal.">Cantonal.</mat-option>
-              <mat-option value="Parroquial.">Parroquial.</mat-option>
-              <mat-option value="Institucional.">Institucional.</mat-option>
-              <mat-option value="Internacional.">Internacional.</mat-option>
-            </mat-select>
-            <!-- <input matInput type="text" placeholder="Alcance Territorial" formControlName="duracionSemanasCtrl"> -->
-          </mat-form-field>
+        <!-- <app-personal-interno></app-personal-interno> -->
 
 
-        </div>
+      </mat-tab>
+      <mat-tab label="Personal Externo Cooperante">
+        Personal Externo Cooperante
 
-        <div class="row">
-          <mat-form-field class="full-width" appearance="fill">
-            <mat-label>Cédula director Proyecto</mat-label>
-            <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl"
-              [matAutocomplete]="auto">
-            <mat-autocomplete #auto="matAutocomplete">
-              <mat-option *ngFor="let option of options" [value]="option">
-                {{option}}
-              </mat-option>
-            </mat-autocomplete>
-          </mat-form-field>
+        <!-- <app-personal-externo-cooperante></app-personal-externo-cooperante> -->
+      </mat-tab>
 
-        </div>
-        <div class="row">
-          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <mat-tab label="Personal Externo a Contratar">
+        Personal Externo a Contratar
 
-            <!--- Note that these columns can be defined in any order.
-                  The actual rendered columns are set as a property on the row definition" -->
+        <!-- <app-personal-externo-contratar></app-personal-externo-contratar> -->
+      </mat-tab>
+      <mat-tab label="Información Técnica">
+        Información Técnica
+      </mat-tab>
 
-            <!-- Position Column -->
-            <ng-container matColumnDef="position">
-              <th mat-header-cell *matHeaderCellDef> No. </th>
-              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-            </ng-container>
+      <mat-tab label="Transferencia de Conocimiento">
+        Transferencia de Conocimiento
+      </mat-tab>
 
-            <!-- Name Column -->
-            <ng-container matColumnDef="nombreDirectorProyecto">
-              <th mat-header-cell *matHeaderCellDef> Nombres Completos </th>
-              <td mat-cell *matCellDef="let element"> {{element.nombreDirectorProyecto}} </td>
-            </ng-container>
+      <mat-tab label="Bibliografía">
+        Bibliografía
+      </mat-tab>
+      <mat-tab label="Observaciones">
+        Observaciones
+      </mat-tab>
 
-            <!-- Weight Column -->
-            <ng-container matColumnDef="identificacionDirectorProyecto">
-              <th mat-header-cell *matHeaderCellDef> Identificación </th>
-              <td mat-cell *matCellDef="let element"> {{element.identificacionDirectorProyecto}} </td>
-            </ng-container>
-
-            <!-- Symbol Column -->
-            <ng-container matColumnDef="telefonoDirectorProyecto">
-              <th mat-header-cell *matHeaderCellDef> Teléfono </th>
-              <td mat-cell *matCellDef="let element"> {{element.telefonoDirectorProyecto}} </td>
-            </ng-container>
-
-            <!-- Symbol Column -->
-            <ng-container matColumnDef="correoDirectorProyecto">
-              <th mat-header-cell *matHeaderCellDef> Correo </th>
-              <td mat-cell *matCellDef="let element"> {{element.correoDirectorProyecto}} </td>
-            </ng-container>
-
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-          </table>
-        </div>
-      </div>
-
-
-
-      <div>
-
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
+    </mat-tab-group>
   </mat-step>
+
   <mat-step [stepControl]="secondFormGroup">
     <form [formGroup]="secondFormGroup">
       <ng-template matStepLabel>
@@ -188,788 +68,19 @@
             ÁREAS DE CONOCIMIENTO DE ACUERDO A ORGANISMOS NACIONALES E INTERNACIONALES
 
           </h4>
-          <div class="container">
-            <div class="row">
-              <mat-form-field appearance="fill">
-                <mat-label>Actividad Científica</mat-label>
-                <!-- <input matInput placeholder="Actividad Científica" formControlName="actividadCientificaCtrl" required> -->
-                <mat-select id="actividadCientifica" formControlName="actividadCientificaCtrl"
-                  name="actividadCientifica" class="form-select" required>
-                  <mat-option value="">-- Elija un Elemento --</mat-option>
-                  <mat-option value="Ciencias exactas y naturales.">
-                    Ciencias exactas y naturales.
-                  </mat-option>
-                  <mat-option value="Ingeniería y tecnología.">
-                    Ingeniería y tecnología.
-                  </mat-option>
-                  <mat-option value="Ciencias médicas.">Ciencias médicas.</mat-option>
-                  <mat-option value="Ciencias agrícolas.">
-                    Ciencias agrícolas.
-                  </mat-option>
-                  <mat-option value="Ciencias Sociales.">Ciencias Sociales.</mat-option>
-                  <mat-option value="Humanidades.">Humanidades.</mat-option>
-                </mat-select>
-              </mat-form-field>
+          <!-- <app-areas-conocimiento></app-areas-conocimiento> -->
 
-              <mat-form-field appearance="fill">
-                <mat-label>Objetivo Socioeconómico</mat-label>
-                <mat-select id="objetivoSocioEconomico" formControlName="objetivoSocioeconomicoCtrl"
-                  name="objetivoSocioEconomico" class="form-select" required>
-                  <mat-option value="">-- Elija un Elemento --</mat-option>
-                  <mat-option value="Exporación y Explotacion de la tierra.">
-                    Exporación y Explotacion de la tierra.
-                  </mat-option>
-                  <mat-option value="Infraestructuras y ordenación del territorio.">
-                    Infraestructuras y ordenación del territorio.
-                  </mat-option>
-                  <mat-option value="Control y protección del medio ambiente.">
-                    Control y protección del medio ambiente.
-                  </mat-option>
-                  <mat-option value="Protección y mejora de la salud humana.">
-                    Protección y mejora de la salud humana.
-                  </mat-option>
-                  <mat-option value="Prod. Dist. y utilización racional de la energía.">
-                    Prod. Dist. y utilización racional de la energía.
-                  </mat-option>
-                  <mat-option value="Producción y tecnología agrícola.">
-                    Producción y tecnología agrícola.
-                  </mat-option>
-                  <mat-option value="Producción y tecnología industrial">
-                    Producción y tecnología industrial
-                  </mat-option>
-                  <mat-option value="Estructuras y relaciones sociales.">
-                    Estructuras y relaciones sociales.
-                  </mat-option>
-                  <mat-option value="Exploración y explotación del espacio.">
-                    Exploración y explotación del espacio.
-                  </mat-option>
-                  <mat-option value="Investigaciones financiadas con los fondos generales de las universidades.">
-                    Investigaciones financiadas con los fondos generales de las
-                    universidades.
-                  </mat-option>
-                  <mat-option value="Investigación no orientada">
-                    Investigación no orientada
-                  </mat-option>
-                  <mat-option value="Otra investigación civil">
-                    Otra investigación civil
-                  </mat-option>
-                  <mat-option value="Defensa">Defensa</mat-option>
-                  <mat-option value="Otros">Otros</mat-option>
-                </mat-select>
-                <!-- <input matInput placeholder="Objetivo Socioeconómico" formControlName="actividadCientificaCtrl" required> -->
-              </mat-form-field>
-
-              <mat-form-field appearance="fill">
-                <mat-label>Área Temática de I+D</mat-label>
-
-                <mat-select id="areaTematicaID" formControlName="areaTematicaID" name="areaTematicaID"
-                  class="form-select" required>
-                  <mat-option value="">-- Elija un Elemento --</mat-option>
-                  <mat-option value="Soberanía alimentaria y transformación agroproductiva">
-                    Soberanía alimentaria y transformación agroproductiva
-                  </mat-option>
-                  <mat-option value="Biodiversidad y patrimonio natural.">
-                    Biodiversidad y patrimonio natural.
-                  </mat-option>
-                  <mat-option value="Salud.">Salud.</mat-option>
-                  <mat-option value="Energía y cambio climático. ">
-                    Energía y cambio climático.
-                  </mat-option>
-                  <mat-option value="Transporte y movilidad">
-                    Transporte y movilidad
-                  </mat-option>
-                  <mat-option value="Seguridad y defensa ">
-                    Seguridad y defensa
-                  </mat-option>
-                  <mat-option value="Habitat humano y gestión de riesgos.">
-                    Habitat humano y gestión de riesgos.
-                  </mat-option>
-                  <mat-option value="Ciencias sociales y humanidades.">
-
-                    Ciencias sociales y humanidades.
-                  </mat-option>
-                </mat-select>
-
-
-              </mat-form-field>
-            </div>
-
-            <div class="row">
-              <mat-form-field class="full-width" appearance="fill">
-                <mat-label>Objetivos del plan de Creación de Oportunidades.</mat-label>
-                <mat-select id="objetivosPlanCreacionOportunidades" formControlName="objetivosPlanCreacionOportunidades"
-                  name="objetivosPlanCreacionOportunidades" class="form-select" required>
-                  <mat-option value="">-- Elija un Elemento --</mat-option>
-                  <mat-option
-                    value="Objetivo 1: Incrementar y fomentar, de manera inclusiva, las oportunidades de empleo y las condiciones laborales.">
-                    Objetivo 1: Incrementar y fomentar, de manera inclusiva, las
-                    oportunidades de empleo y las condiciones laborales.
-                  </mat-option>
-                  <mat-option
-                    value="Objetivo 2: Impulsar un sistema económico con reglas claras que fomenten el comercio exterior, turismo, atracción de inversiones y modernización del sistema financiero nacional.">
-                    Objetivo 2: Impulsar un sistema económico con reglas claras
-                    que fomenten el comercio exterior, turismo, atracción de
-                    inversiones y modernización del sistema financiero nacional.
-                  </mat-option>
-                  <mat-option
-                    value="Objetivo 3: Fomentar la productividad y competitividad en los sectores agrícola, industrial, acuícula y pesquero, bajo el enfoque de economía circular. ">
-                    Objetivo 3: Fomentar la productividad y competitividad en
-                    los sectores agrícola, industrial, acuícula y pesquero, bajo
-                    el enfoque de economía circular.
-                  </mat-option>
-                  <mat-option
-                    value="Objetivo 4: Garantiza la gestión de las finanzas públicas de manera sostenible y transparente.">
-                    Objetivo 4: Garantiza la gestión de las finanzas públicas de
-                    manera sostenible y transparente.
-                  </mat-option>
-                  <mat-option
-                    value="Objetivo 5: Proteger a las familias, garantizar sus derechos y servicios, erradicar la pobreza y promover la inclusión social.">
-                    Objetivo 5: Proteger a las familias, garantizar sus derechos
-                    y servicios, erradicar la pobreza y promover la inclusión
-                    social.
-                  </mat-option>
-                  <mat-option value="Objetivo 6: Garantizar el derecho a la salud integral, gratuita y de calidad.">
-                    Objetivo 6: Garantizar el derecho a la salud integral,
-                    gratuita y de calidad.
-                  </mat-option>
-                  <mat-option
-                    value="Objetivo 7: Potenciar las capacidades de la ciudadanía y promover una educación innovadora, inclusiva y de calidad en todos los niveles.">
-                    Objetivo 7: Potenciar las capacidades de la ciudadanía y
-                    promover una educación innovadora, inclusiva y de calidad en
-                    todos los niveles.
-                  </mat-option>
-                  <mat-option
-                    value="Objetivo 8: Generar nuevas oportunidades y bienestar para las zonas rurales, con énfasis en pueblos y nacionalidades.">
-                    Objetivo 8: Generar nuevas oportunidades y bienestar para
-                    las zonas rurales, con énfasis en pueblos y nacionalidades.
-                  </mat-option>
-                  <mat-option
-                    value="Objetivo 9: Garantizar la seguridad ciudadana, orden público y gestión de riesgos.">
-                    Objetivo 9: Garantizar la seguridad ciudadana, orden público
-                    y gestión de riesgos.
-                  </mat-option>
-                  <mat-option
-                    value="Objetivo 10: Garantizar la soberanía nacional, integridad territorial y seguridad del Estado.">
-                    Objetivo 10: Garantizar la soberanía nacional, integridad
-                    territorial y seguridad del Estado.
-                  </mat-option>
-                  <mat-option
-                    value="Objetivo 11: Conservar, restaurar, proteger y hacer un uso sostenible de los recursos naturales.">
-                    Objetivo 11: Conservar, restaurar, proteger y hacer un uso
-                    sostenible de los recursos naturales.
-                  </mat-option>
-                  <mat-option
-                    value="Objetivo 12: Fomentar modelos de desarrollo sostenible aplicando medidas de apatación y mitigación al Cambio Climático.">
-                    Objetivo 12: Fomentar modelos de desarrollo sostenible
-                    aplicando medidas de apatación y mitigación al Cambio
-                    Climático.
-                  </mat-option>
-                  <mat-option value="Objetivo 13: Promover la gestión integral de los recursos hídricos.">
-                    Objetivo 13: Promover la gestión integral de los recursos
-                    hídricos.
-                  </mat-option>
-                  <mat-option
-                    value="Objetivo 14: Fortalecer las capacidades del Estado con énfasis en la administración de justicia y eficiencia en los procesos de regulación y control, con independencia y autonomía.">
-                    Objetivo 14: Fortalecer las capacidades del Estado con
-                    énfasis en la administración de justicia y eficiencia en los
-                    procesos de regulación y control, con independencia y
-                    autonomía.
-                  </mat-option>
-                  <mat-option
-                    value="Objetivo 15: Fomentar la ética pública, la transparencia y la lucha contra la corrupción.">
-                    Objetivo 15: Fomentar la ética pública, la transparencia y
-                    la lucha contra la corrupción.
-                  </mat-option>
-                  <mat-option
-                    value="Objetivo 16: Promover la integración regional, la inserción estratégica del país en el mundo y garantizar los derechos de las personas en situación de movilidad humana.">
-                    Objetivo 16: Promover la integración regional, la inserción
-                    estratégica del país en el mundo y garantizar los derechos
-                    de las personas en situación de movilidad humana.
-                  </mat-option>
-                </mat-select>
-              </mat-form-field>
-            </div>
-            <div class="row">
-              <h3>
-                Clasificación Internacional Normalizada de la Educación
-              </h3>
-
-              <mat-form-field appearance="fill">
-                <mat-label>
-                  Campo Amplio
-                </mat-label>
-                <mat-select id="campoAmplio" formControlName="campoAmplio" name="campoAmplio" class="form-select">
-                  <mat-option value="">-- Elija un Elemento --</mat-option>
-
-                  <mat-option value="01-A Educación.">01-A Educación.</mat-option>
-                  <mat-option value="02-A Artes y Humanidades.">
-                    02-A Artes y Humanidades.
-                  </mat-option>
-                  <mat-option value="03-A  Ciencias Sociales, periodismo, información y derecho.">
-                    03-A Ciencias Sociales, periodismo, información y derecho.
-                  </mat-option>
-                  <mat-option value="04-A Administración.">
-                    04-A Administración.
-                  </mat-option>
-                  <mat-option value="05-A Ciencias Naturales, matemáticas y estadísticas.">
-                    05-A Ciencias Naturales, matemáticas y estadísticas.
-                  </mat-option>
-                  <mat-option value="06-A Tecnologías de la información y la comunicación (TIC).">
-                    06-A Tecnologías de la información y la comunicación (TIC).
-                  </mat-option>
-                  <mat-option value="07-A Ingeniería, industria y construcción.">
-                    07-A Ingeniería, industria y construcción.
-                  </mat-option>
-                  <mat-option value="08-A Agricultura, silvicultura, pesca y veterinaria.">
-                    08-A Agricultura, silvicultura, pesca y veterinaria.
-                  </mat-option>
-                  <mat-option value="09-A Salud y Bienestar.">
-                    09-A Salud y Bienestar.
-                  </mat-option>
-                  <mat-option value="10-A Servicios.">10-A Servicios.</mat-option>
-                </mat-select>
-              </mat-form-field>
-
-              <mat-form-field appearance="fill">
-                <mat-label>
-                  Campo Específico
-                </mat-label>
-                <mat-select id="campoEspecifico" formControlName="campoEspecifico" name="campoEspecifico"
-                  class="form-select">
-                  <mat-option value="">-- Elija un Elemento --</mat-option>
-                  <mat-option value="1-1A Educación">1-1A Educación</mat-option>
-                  <mat-option value="1-2A Artes">1-2A Artes</mat-option>
-                  <mat-option value="2-2A Humanidades ">2-2A Humanidades</mat-option>
-                  <mat-option value="3-2A Idiomas">3-2A Idiomas</mat-option>
-                  <mat-option value="1-3A Ciencias Sociales y del comportamiento">
-                    1-3A Ciencias Sociales y del comportamiento
-                  </mat-option>
-                  <mat-option value="2-3A Periodismo e información. ">
-                    2-3A Periodismo e información.
-                  </mat-option>
-                  <mat-option value="3-3A Derecho">3-3A Derecho</mat-option>
-                  <mat-option value="1-4A Educación comercial y administración ">
-                    1-4A Educación comercial y administración
-                  </mat-option>
-                  <mat-option value="1-5A Ciencias Biológicas y afines ">
-                    1-5A Ciencias Biológicas y afines
-                  </mat-option>
-                  <mat-option value="2-5A Medio ambiente ">
-                    2-5A Medio ambiente
-                  </mat-option>
-                  <mat-option value="3-5A Ciencias físicas  ">
-                    3-5A Ciencias físicas
-                  </mat-option>
-                  <mat-option value="4-5A Matemáticas y estadística">
-                    4-5A Matemáticas y estadística
-                  </mat-option>
-                  <mat-option value="1-6A Tecnologías de la Información y la comunicación (TIC) ">
-                    1-6A Tecnologías de la Información y la comunicación (TIC)
-                  </mat-option>
-                  <mat-option value="1-7A Ingeniería y profesiones afines2-7A Industria y producción ">
-                    1-7A Ingeniería y profesiones afines2-7A Industria y
-                    producción
-                  </mat-option>
-                  <mat-option value="2-7A Industria y producción ">
-                    2-7A Industria y producción
-                  </mat-option>
-                  <mat-option value="3-7A Arquitectura y construcción  ">
-                    3-7A Arquitectura y construcción
-                  </mat-option>
-                  <mat-option value="1-8A Agricultura">1-8A Agricultura</mat-option>
-                  <mat-option value="2-8A Silvicultura ">2-8A Silvicultura</mat-option>
-                  <mat-option value="3-8A Pesca ">3-8A Pesca</mat-option>
-                  <mat-option value="4-8A Veterinaria">4-8A Veterinaria</mat-option>
-                  <mat-option value="1-9A Salud ">1-9A Salud</mat-option>
-                  <mat-option value="2-9A Bienestar ">2-9A Bienestar</mat-option>
-                  <mat-option value="1-10A Servicios personales">
-                    1-10A Servicios personales
-                  </mat-option>
-                  <mat-option value="2-10A Servicios de protección ">
-                    2-10A Servicios de protección
-                  </mat-option>
-                  <mat-option value="3-10A Servicios de seguridad ">
-                    3-10A Servicios de seguridad
-                  </mat-option>
-                  <mat-option value="4-10A Servicio de transporte">
-                    4-10A Servicio de transporte
-                  </mat-option>
-                </mat-select>
-              </mat-form-field>
-
-              <mat-form-field appearance="fill">
-                <mat-label>
-                  Campo Detallado
-                </mat-label>
-                <mat-select id="campoDetallado" formControlName="campoDetallado" name="campoDetallado"
-                  class="form-select">
-                  <mat-option value="">-- Elija un Elemento --</mat-option>
-                  <mat-option value="1-11A Educación">1-11A Educación</mat-option>
-                  <mat-option value="81-11A Psicopedagogía ">
-                    81-11A Psicopedagogía
-                  </mat-option>
-                  <mat-option value="2-11A Formación para docentes de educación preprimaria">
-                    2-11A Formación para docentes de educación preprimaria
-                  </mat-option>
-                  <mat-option value="3-11A Formación para docentes sin asignaturas de especialización ">
-                    3-11A Formación para docentes sin asignaturas de
-                    especialización
-                  </mat-option>
-                  <mat-option value="4-11A Formación para docentes con asignaturas de especialización ">
-                    4-11A Formación para docentes con asignaturas de
-                    especialización
-                  </mat-option>
-                  <mat-option value="1-12A Técnicas y producción para medios de comunicación  ">
-                    1-12A Técnicas y producción para medios de comunicación
-                  </mat-option>
-                  <mat-option value="2-12A Diseño">2-12A Diseño</mat-option>
-                  <mat-option value="3-12A Artes">3-12A Artes</mat-option>
-                  <mat-option value="5-12A Música y artes escénicas ">
-                    5-12A Música y artes escénicas
-                  </mat-option>
-                  <mat-option value="1-22A Religión y Teología ">
-                    1-22A Religión y Teología
-                  </mat-option>
-                  <mat-option value="2-22A Historia y Arqueología ">
-                    2-22A Historia y Arqueología
-                  </mat-option>
-                  <mat-option value="3-22A Filosofía">3-22A Filosofía</mat-option>
-                  <mat-option value="1-32A Idiomas ">1-32A Idiomas</mat-option>
-                  <mat-option value="2-32A Literatura y lingüística ">
-                    2-32A Literatura y lingüística
-                  </mat-option>
-                  <mat-option value="1-13A Economía">1-13A Economía</mat-option>
-                  <mat-option value="81-13A Economía Matemática ">
-                    81-13A Economía Matemática
-                  </mat-option>
-                  <mat-option value="2-13A Ciencias políticas ">
-                    2-13A Ciencias políticas
-                  </mat-option>
-                  <mat-option value="3-13A Psicología ">3-13A Psicología</mat-option>
-                  <mat-option value="4-13A Estudios Sociales y Culturales">
-                    4-13A Estudios Sociales y Culturales
-                  </mat-option>
-                  <mat-option value="82-13A Estudios de Género">
-                    82-13A Estudios de Género
-                  </mat-option>
-                  <mat-option value="83-13A Geografía y territorio ">
-                    83-13A Geografía y territorio
-                  </mat-option>
-                  <mat-option value="1-23A Periodismo y comunicación  ">
-                    1-23A Periodismo y comunicación
-                  </mat-option>
-                  <mat-option value="2-23A Bibliotecología, documentación y archivología ">
-                    2-23A Bibliotecología, documentación y archivología
-                  </mat-option>
-                  <mat-option value="1-33A Derecho ">1-33A Derecho</mat-option>
-                  <mat-option value="1-14A Contabilidad y auditoría ">
-                    1-14A Contabilidad y auditoría
-                  </mat-option>
-                  <mat-option value="2-14A Gestión financiera ">
-                    2-14A Gestión financiera
-                  </mat-option>
-                  <mat-option value="3-14A Administración  ">
-                    3-14A Administración
-                  </mat-option>
-                  <mat-option value="4-14A Mercadotecnia y publicidad  ">
-                    4-14A Mercadotecnia y publicidad
-                  </mat-option>
-                  <mat-option value="6-14A Comercio  ">6-14A Comercio</mat-option>
-                  <mat-option value="7-14A Competencias laborales  ">
-                    7-14A Competencias laborales
-                  </mat-option>
-                  <mat-option value="1-15A Biología  ">1-15A Biología</mat-option>
-                  <mat-option value="81-15A Biofísica  ">81-15A Biofísica</mat-option>
-                  <mat-option value="82-15A Biofarmacéutica ">
-                    82-15A Biofarmacéutica
-                  </mat-option>
-                  <mat-option value="83-15A Biomedicina  ">
-                    83-15A Biomedicina
-                  </mat-option>
-                  <mat-option value="2-15A Bioquímica  ">2-15A Bioquímica</mat-option>
-                  <mat-option value="84-15A Genética  ">84-15A Genética</mat-option>
-                  <mat-option value="85-15A Biodiversidad  ">
-                    85-15A Biodiversidad
-                  </mat-option>
-                  <mat-option value="86-15A Neurociencias  ">
-                    86-15A Neurociencias
-                  </mat-option>
-                  <mat-option value="1-25A Medio ambiente  ">
-                    1-25A Medio ambiente
-                  </mat-option>
-                  <mat-option value="2-25A Recursos Naturales Renovables  ">
-                    2-25A Recursos Naturales Renovables
-                  </mat-option>
-                  <mat-option value="1-35A Química  ">1-35A Química</mat-option>
-                  <mat-option value="2-35A Ciencias de la Tierra  ">
-                    2-35A Ciencias de la Tierra
-                  </mat-option>
-                  <mat-option value="3-35A Física ">3-35A Física</mat-option>
-                  <mat-option value="1-45A Matemáticas ">1-45A Matemáticas</mat-option>
-                  <mat-option value="81-45A Logística y transporte ">
-                    81-45A Logística y transporte
-                  </mat-option>
-                  <mat-option value="1-16A Computación ">1-16A Computación</mat-option>
-                  <mat-option value="2-16A Diseño y administración de redes y bases de datos ">
-                    2-16A Diseño y administración de redes y bases de datos
-                  </mat-option>
-                  <mat-option value="3-16A Desarrollo y análisis de software y aplicaciones  ">
-                    3-16A Desarrollo y análisis de software y aplicaciones
-                  </mat-option>
-                  <mat-option value="81-16A  Sistemas de Información ">
-                    81-16A Sistemas de Información
-                  </mat-option>
-                  <mat-option value="1-17A  Química aplicada ">
-                    1-17A Química aplicada
-                  </mat-option>
-                  <mat-option value="2-17A Tecnología de protección del medio ambiente  ">
-                    2-17A Tecnología de protección del medio ambiente
-                  </mat-option>
-                  <mat-option value="3-17A Electricidad y energía ">
-                    3-17A Electricidad y energía
-                  </mat-option>
-                  <mat-option value="4-17A Electrónica, automatización y sonido  ">
-                    4-17A Electrónica, automatización y sonido
-                  </mat-option>
-                  <mat-option value="5-17A Mecánica y profesiones afines a la metalistería ">
-                    5-17A Mecánica y profesiones afines a la metalistería
-                  </mat-option>
-                  <mat-option value="6-17A Diseño y construcción de vehículos, barcos y aeronaves motorizadas  ">
-                    6-17A Diseño y construcción de vehículos, barcos y aeronaves
-                    motorizadas
-                  </mat-option>
-                  <mat-option value="81-17A Tecnologías Nucleares y Energéticas  ">
-                    81-17A Tecnologías Nucleares y Energéticas
-                  </mat-option>
-                  <mat-option value="82-17A  Mecatrónica  ">
-                    82-17A Mecatrónica
-                  </mat-option>
-                  <mat-option value="83-17A  Hidráulica ">83-17A Hidráulica</mat-option>
-                  <mat-option value="84-17A  Telecomunicaciones ">
-                    84-17A Telecomunicaciones
-                  </mat-option>
-                  <mat-option value="85-17A  Nanotecnología  ">
-                    85-17A Nanotecnología
-                  </mat-option>
-                  <mat-option value="1-27A  Procesamiento de alimentos ">
-                    1-27A Procesamiento de alimentos
-                  </mat-option>
-                  <mat-option value="2-27A  Materiales  ">2-27A Materiales</mat-option>
-                  <mat-option value="3-27A  Productos textiles  ">
-                    3-27A Productos textiles
-                  </mat-option>
-                  <mat-option value="4-27A  Minería y extracción  ">
-                    4-27A Minería y extracción
-                  </mat-option>
-                  <mat-option value="5-27A  Producción industrial ">
-                    5-27A Producción industrial
-                  </mat-option>
-                  <mat-option value="6-27A  Seguridad industrial  ">
-                    6-27A Seguridad industrial
-                  </mat-option>
-                  <mat-option value="7-27A  Diseño industrial y de procesos ">
-                    7-27A Diseño industrial y de procesos
-                  </mat-option>
-                  <mat-option value="82-7A  Mantenimiento industrial  ">
-                    82-7A Mantenimiento industrial
-                  </mat-option>
-                  <mat-option value="1-37A Arquitectura, urbanismo y restauración  ">
-                    1-37A Arquitectura, urbanismo y restauración
-                  </mat-option>
-                  <mat-option value="2-37A  Construcción e ingeniería civil  ">
-                    2-37A Construcción e ingeniería civil
-                  </mat-option>
-                  <mat-option value="1-18A  Producción agrícola y ganadera ">
-                    1-18A Producción agrícola y ganadera
-                  </mat-option>
-                  <mat-option value="1-28A  Silvicultura  ">
-                    1-28A Silvicultura
-                  </mat-option>
-                  <mat-option value="1-38A  Pesca   ">1-38A Pesca</mat-option>
-                  <mat-option value="1-48A  Veterinaria   ">
-                    1-48A Veterinaria
-                  </mat-option>
-                  <mat-option value="1-19A  Odontología  ">
-                    1-19A Odontología
-                  </mat-option>
-                  <mat-option value="2-19A  Medicina   ">2-19A Medicina</mat-option>
-                  <mat-option value="3-19A  Enfermería y obstetricia  ">
-                    3-19A Enfermería y obstetricia
-                  </mat-option>
-                  <mat-option value="4-19A Tecnología de diagnóstico y tratamiento médico   ">
-                    4-19A Tecnología de diagnóstico y tratamiento médico
-                  </mat-option>
-                  <mat-option value="5-19A  Terapia y rehabilitación  ">
-                    5-19A Terapia y rehabilitación
-                  </mat-option>
-                  <mat-option value="6-19A  Farmacia   ">6-19A Farmacia</mat-option>
-                  <mat-option value="7-19A Terapias alternativas y complementarias   ">
-                    7-19A Terapias alternativas y complementarias
-                  </mat-option>
-                  <mat-option value="8-19A  Salud Pública  ">
-                    8-19A Salud Pública
-                  </mat-option>
-                  <mat-option value="1-29A Asistencia a adultos mayores y discapacitados   ">
-                    1-29A Asistencia a adultos mayores y discapacitados
-                  </mat-option>
-                  <mat-option value="2-29A Asistencia a la infancia y servicios para jóvenes  ">
-                    2-29A Asistencia a la infancia y servicios para jóvenes
-                  </mat-option>
-                  <mat-option value="2-110A Peluquería y tratamiento de belleza   ">
-                    2-110A Peluquería y tratamiento de belleza
-                  </mat-option>
-                  <mat-option value="3-110A  Hotelería y gastronomía  ">
-                    3-110A Hotelería y gastronomía
-                  </mat-option>
-                  <mat-option value="4-110A  Actividad física   ">
-                    4-110A Actividad física
-                  </mat-option>
-                  <mat-option value="5-110A  Turismo   ">5-110A Turismo</mat-option>
-                  <mat-option value="1-210A  Prevención y gestión de riesgos  ">
-                    1-210A Prevención y gestión de riesgos
-                  </mat-option>
-                  <mat-option value="2-210A  Salud y seguridad ocupacional   ">
-                    2-210A Salud y seguridad ocupacional
-                  </mat-option>
-                  <mat-option value="1-310A Educación policial, militar y defensa   ">
-                    1-310A Educación policial, militar y defensa
-                  </mat-option>
-                  <mat-option value="2-310A  Seguridad ciudadana  ">
-                    2-310A Seguridad ciudadana
-                  </mat-option>
-                  <mat-option value="1-410A  Gestión del transporte  ">
-                    1-410A Gestión del transporte
-                  </mat-option>
-                </mat-select>
-              </mat-form-field>
-            </div>
-            <div class="row">
-
-              <mat-form-field class="full-width" appearance="fill">
-                <mat-label>Objetivos del desarrollo Sostenible</mat-label>
-
-                <mat-select id="objetivosDesarrolloSostenible" formControlName="objetivosDesarrolloSostenible"
-                  name="objetivosDesarrolloSostenible" class="form-select">
-                  <mat-option value="">-- Elija un Elemento --</mat-option>
-                  <mat-option value="Objetivo 1: Poner fin a la pobreza en todas sus formas en todo el mundo ">
-                    Objetivo 1: Poner fin a la pobreza en todas sus formas en
-                    todo el mundo
-                  </mat-option>
-                  <mat-option value="Objetivo 2: Poner fin al hambre ">
-                    Objetivo 2: Poner fin al hambre
-                  </mat-option>
-                  <mat-option
-                    value="Objetivo 3: Garantizar una vida sana y promover el bienestar para todos en todas las edades ">
-                    Objetivo 3: Garantizar una vida sana y promover el bienestar
-                    para todos en todas las edades
-                  </mat-option>
-                  <mat-option
-                    value="Objetivo 4: Garantizar una educación inclusiva, equitativa y de calidad y promover oportunidades de aprendizaje durante toda la vida para todos ">
-                    Objetivo 4: Garantizar una educación inclusiva, equitativa y
-                    de calidad y promover oportunidades de aprendizaje durante
-                    toda la vida para todos
-                  </mat-option>
-                  <mat-option
-                    value="Objetivo 5: Lograr la igualdad entre los géneros y empoderar a todas las mujeres y las niñas ">
-                    Objetivo 5: Lograr la igualdad entre los géneros y empoderar
-                    a todas las mujeres y las niñas
-                  </mat-option>
-                  <mat-option
-                    value="Objetivo 6: Garantizar la disponibilidad de agua y su gestión sostenible y el saneamiento para todos ">
-                    Objetivo 6: Garantizar la disponibilidad de agua y su
-                    gestión sostenible y el saneamiento para todos
-                  </mat-option>
-                  <mat-option
-                    value="Objetivo 7: Garantizar el acceso a una energía asequible, segura, sostenible y moderna ">
-                    Objetivo 7: Garantizar el acceso a una energía asequible,
-                    segura, sostenible y moderna
-                  </mat-option>
-                  <mat-option
-                    value="Objetivo 8: Promover el crecimiento económico inclusivo y sostenible, el empleo y el trabajo decente para todos ">
-                    Objetivo 8: Promover el crecimiento económico inclusivo y
-                    sostenible, el empleo y el trabajo decente para todos
-                  </mat-option>
-                  <mat-option
-                    value="Objetivo 9: Construir infraestructuras resilientes, promover la industrialización sostenible y fomentar la innovación ">
-                    Objetivo 9: Construir infraestructuras resilientes, promover
-                    la industrialización sostenible y fomentar la innovación
-                  </mat-option>
-                  <mat-option value="Objetivo 10: Reducir la desigualdad en y entre los países ">
-                    Objetivo 10: Reducir la desigualdad en y entre los países
-                  </mat-option>
-                  <mat-option
-                    value="Objetivo 11: Lograr que las ciudades sean más inclusivas, seguras, resilientes y sostenibles ">
-                    Objetivo 11: Lograr que las ciudades sean más inclusivas,
-                    seguras, resilientes y sostenibles
-                  </mat-option>
-                  <mat-option value="Objetivo 12: Garantizar modalidades de consumo y producción sostenibles ">
-                    Objetivo 12: Garantizar modalidades de consumo y producción
-                    sostenibles
-                  </mat-option>
-                  <mat-option
-                    value="Objetivo 13: Adoptar medidas urgentes para combatir el cambio climático y sus efectos ">
-                    Objetivo 13: Adoptar medidas urgentes para combatir el
-                    cambio climático y sus efectos
-                  </mat-option>
-                  <mat-option
-                    value="Objetivo 14: Conservar y utilizar sosteniblemente los océanos, los mares y los recursos marinos ">
-                    Objetivo 14: Conservar y utilizar sosteniblemente los
-                    océanos, los mares y los recursos marinos
-                  </mat-option>
-                  <mat-option
-                    value="Objetivo 15: Gestionar sosteniblemente los bosques, luchar contra la desertificación, detener e invertir la degradación de las tierras, detener la pérdida de biodiversidad ">
-                    Objetivo 15: Gestionar sosteniblemente los bosques, luchar
-                    contra la desertificación, detener e invertir la degradación
-                    de las tierras, detener la pérdida de biodiversidad
-                  </mat-option>
-                  <mat-option value="Objetivo 16: Promover sociedades justas, pacíficas e inclusivas ">
-                    Objetivo 16: Promover sociedades justas, pacíficas e
-                    inclusivas
-                  </mat-option>
-                  <mat-option value="Objetivo 17: Revitalizar la Alianza Mundial para el Desarrollo Sostenible ">
-                    Objetivo 17: Revitalizar la Alianza Mundial para el
-                    Desarrollo Sostenible
-                  </mat-option>
-                </mat-select>
-              </mat-form-field>
-
-            </div>
-
-            <div class="row">
-              <h4>
-                Tipo de Proyecto.
-              </h4>
-
-              <mat-form-field appearance="fill">
-                <mat-label>
-                  Tipo de Proyecto:
-                </mat-label>
-                <mat-select id="tipoProyecto" value=formData.tipoProyecto onChange=handleChange name="tipoProyecto"
-                  class="form-select" required>
-                  <mat-option value="">-- Elija un Elemento --</mat-option>
-                  <mat-option value="Investigación"> Investigación. </mat-option>
-                  <mat-option value="Innovación"> Innovación. </mat-option>
-                  <mat-option value="Consultoría"> Consultoría. </mat-option>
-                </mat-select>
-              </mat-form-field>
-
-              <mat-form-field appearance="fill">
-                <mat-label>
-                  Tipo de Investigación:
-                </mat-label>
-                <mat-select id="tipoInvestigacion" value=formData.tipoInvestigacion onChange=handleChange
-                  name="tipoInvestigacion" class="form-select" required>
-                  <mat-option value="">-- Elija un Elemento --</mat-option>
-                  <mat-option value="Investigación Básica."> Investigación Básica. </mat-option>
-                  <mat-option value="Investigación Aplicada."> Investigación Aplicada. </mat-option>
-                  <mat-option value="Desarrollo Experimental."> Desarrollo Experimental. </mat-option>
-                </mat-select>
-              </mat-form-field>
-
-              <mat-form-field appearance="fill">
-                <mat-label>
-                  Tipo de Financiamiento:
-                </mat-label>
-                <mat-select id="tipoFinanciamiento" value=formData.tipoFinanciamiento onChange=handleChange
-                  name="tipoFinanciamiento" class="form-select" required>
-                  <mat-option value="">
-                    -- Elija un Elemento --
-                  </mat-option>
-                  <mat-option value="ASIGNACIÓN REGULAR IES.">
-                    ASIGNACIÓN REGULAR IES.
-                  </mat-option>
-                  <mat-option value="FONDOS CONCURSABLES INTERNO IES.">FONDOS CONCURSABLES INTERNO IES. </mat-option>
-                  <mat-option value="FONDOS CONCURSABLES NACIONALES.">FONDOS CONCURSABLES NACIONALES. </mat-option>
-                  <mat-option value="FONDOS CONSURSABLES INTERNACIONALES">FONDOS CONSURSABLES INTERNACIONALES.
-                  </mat-option>
-
-                  <mat-option value="ASIGNACIÓN REGULAR IES/FONDOS CONCURSABLES INTERNO IES.">ASIGNACIÓN REGULAR
-                    IES/FONDOS CONCURSABLES INTERNO IES. </mat-option>
-                  <mat-option value="ASIGNACIÓN REGULAR IES/FONDOS CONCURSABLES NACIONALES.">ASIGNACIÓN REGULAR
-                    IES/FONDOS
-                    CONCURSABLES NACIONALES. </mat-option>
-                  <mat-option value="ASIGNACIÓN REGULAR IES/FONDOS CONCURSABLES INTERNACIONALES.">ASIGNACIÓN REGULAR
-                    IES/FONDOS CONCURSABLES INTERNACIONALES. </mat-option>
-
-                  <mat-option value="FONDOS CONCURSABLES INTERNO IES/ FONDOS CONCURSABLE NACIONALES.">FONDOS
-                    CONCURSABLES
-                    INTERNO IES/ FONDOS CONCURSABLE NACIONALES. </mat-option>
-                  <mat-option value="FONDOS CONCURSABLES INTERNO IES/ FONDOS CONCURSABLE SINTERNACIONALES.">FONDOS
-                    CONCURSABLES INTERNO IES/ FONDOS CONCURSABLE SINTERNACIONALES. </mat-option>
-                  <mat-option value="FONDOS CONCURSABLE INTERNO NACIONALES/FONDOS CONCURSABLES INTERNACIONALES">FONDOS
-                    CONCURSABLE INTERNO NACIONALES/FONDOS CONCURSABLES INTERNACIONALES </mat-option>
-                  <mat-option
-                    value="ASIGNACION REGULAR IES/FONDOS CONCURSABLES INTERNO IES/ FONDO CONCURSABLES INTERNO NACIONALES/FONDOS CONCURSABLES INTERNACIONALES ">
-                    ASIGNACION REGULAR IES/FONDOS CONCURSABLES INTERNO IES/ FONDO CONCURSABLES INTERNO
-                    NACIONALES/FONDOS CONCURSABLES INTERNACIONALES </mat-option>
-
-                </mat-select>
-              </mat-form-field>
-
-
-            </div>
-            <div class="row">
-
-              <mat-form-field class="full-width" appearance="fill">
-                <mat-label>ORGANISMO (S)/ENTIDAD (ES) FINANCIADOR (ES):</mat-label>
-                <input matInput placeholder="ORGANISMO (S)/ENTIDAD (ES) FINANCIADOR (ES):"
-                  formControlName="organismoEntidadFinanciador" required>
-              </mat-form-field>
-
-            </div>
-
-            <div class="row">
-
-              <mat-form-field appearance="fill">
-                <mat-label>Aporte UTPL</mat-label>
-
-                <input matInput type="number" min=0 placeholder="Ingresar Valor" class="form--input" required />
-              </mat-form-field>
-              <mat-form-field appearance="fill">
-                <mat-label>Aporte Contraparte</mat-label>
-
-                <input matInput type="number" min=0 placeholder="Ingresar Valor" class="form--input" required />
-              </mat-form-field>
-
-              <mat-form-field appearance="fill">
-                <mat-label>Presupuesto Total</mat-label>
-
-                <input matInput type="number" min=0 placeholder="Ingresar Valor" class="form--input" required />
-              </mat-form-field>
-
-            </div>
-          </div>
-
-        </mat-tab>
-        <mat-tab label="Personal Interno">
-          Equipo del Proyecto
-          Personal Interno
-
-          <app-personal-interno></app-personal-interno>
-
-
-        </mat-tab>
-        <mat-tab label="Personal Externo Cooperante">
-          Personal Externo Cooperante
-
-          <app-personal-externo-cooperante></app-personal-externo-cooperante>
-        </mat-tab>
-
-        <mat-tab label="Personal Externo a Contratar">
-          Personal Externo a Contratar
-
-          <app-personal-externo-contratar></app-personal-externo-contratar>
         </mat-tab>
 
 
         <mat-tab label="Información Técnica del Proyecto">
           Información Técnica del Proyecto
-          <app-informacion-tecnica-proyecto></app-informacion-tecnica-proyecto>
+          <!-- <app-informacion-tecnica-proyecto></app-informacion-tecnica-proyecto> -->
         </mat-tab>
 
         <mat-tab label="Metodología del Proyecto">
           Metodología del Proyecto
-          <app-metodologia-proyecto></app-metodologia-proyecto>
+          <!-- <app-metodologia-proyecto></app-metodologia-proyecto> -->
         </mat-tab>
 
 
@@ -978,10 +89,7 @@
           <app-cronograma-esp-a></app-cronograma-esp-a>
         </mat-tab>
 
-        <mat-tab label="Resumen del Presupuesto">
-          Resumen del Presupuesto
-          <app-resumen-presupuesto></app-resumen-presupuesto>
-        </mat-tab>
+
 
       </mat-tab-group>
 
@@ -993,13 +101,38 @@
     </form>
   </mat-step>
 
-  <mat-step [stepControl]="thirdFormGroup">
-    <form [formGroup]="thirdFormGroup">
+  <mat-step [stepControl]="vinculacionFormGroup">
+    <form [formGroup]="vinculacionFormGroup">
       <ng-template matStepLabel>Vinculación</ng-template>
-      <mat-form-field appearance="fill">
-        <mat-label>Address</mat-label>
-        <input matInput formControlName="thirdCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
-      </mat-form-field>
+      <mat-tab-group mat-align-tabs="center">
+        <mat-tab label="Datos Informativos">
+          Datos Informativos
+
+        </mat-tab>
+        <mat-tab label="Organización Demandante">
+          Organización Demandante
+
+        </mat-tab>
+        <mat-tab label="Metodología Vinculación">
+
+          Metodología Vinculación
+        </mat-tab>
+
+        <mat-tab label="Cronograma Vinculacion">
+
+          Cronograma Vinculación
+        </mat-tab>
+
+        <mat-tab label="Otros Aspectos">
+
+          Otros Aspectos Vinculación
+        </mat-tab>
+
+        <mat-tab label="Anexos">
+
+          Anexos
+        </mat-tab>
+      </mat-tab-group>
       <div>
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button matStepperNext>Next</button>
@@ -1007,13 +140,31 @@
     </form>
   </mat-step>
 
-  <mat-step [stepControl]="thirdFormGroup">
-    <form [formGroup]="thirdFormGroup">
+  <mat-step [stepControl]="innovacionDocenteFormGroup">
+    <form [formGroup]="innovacionDocenteFormGroup">
       <ng-template matStepLabel>Innovación Docente</ng-template>
-      <mat-form-field appearance="fill">
-        <mat-label>Address</mat-label>
-        <input matInput formControlName="thirdCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
-      </mat-form-field>
+      <mat-tab-group mat-align-tabs="center">
+        <mat-tab label="Datos Informativos">
+          Datos Informativos
+          1.3
+          1.4
+          2.2
+
+        </mat-tab>
+        <mat-tab label="Metodologia Innovacion Docente">
+
+          Metodología Innovación Docente
+        </mat-tab>
+        <mat-tab label="Cronograma">
+
+          Cronograma Innovación Docente
+        </mat-tab>
+        <mat-tab label="Materiales y Recursos">
+
+          Materiales y Recursos
+        </mat-tab>
+
+      </mat-tab-group>
       <div>
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button matStepperNext>Next</button>
@@ -1021,8 +172,8 @@
     </form>
   </mat-step>
 
-  <mat-step [stepControl]="thirdFormGroup">
-    <form [formGroup]="thirdFormGroup">
+  <mat-step [stepControl]="innovacionPrototiposFormGroup">
+    <form [formGroup]="innovacionPrototiposFormGroup">
       <ng-template matStepLabel>Innovación Prototipo</ng-template>
       <mat-form-field appearance="fill">
         <mat-label>Address</mat-label>
@@ -1038,10 +189,12 @@
   <mat-step [stepControl]="thirdFormGroup">
     <form [formGroup]="thirdFormGroup">
       <ng-template matStepLabel>Consolidado General</ng-template>
-      <mat-form-field appearance="fill">
-        <mat-label>Address</mat-label>
-        <input matInput formControlName="thirdCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
-      </mat-form-field>
+
+      <mat-tab-group mat-align-tabs="center">
+        <mat-tab label="Presupuesto">Presupuesto</mat-tab>
+        <mat-tab label="Cronograma">Cronograma</mat-tab>
+      </mat-tab-group>
+
       <div>
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button matStepperNext>Next</button>

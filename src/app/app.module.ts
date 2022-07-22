@@ -38,6 +38,8 @@ import { CronogramaEspEComponent } from './pages/cronograma-esp-e/cronograma-esp
 import { TextFieldModule } from '@angular/cdk/text-field';
 
 import { MatGridListModule } from '@angular/material/grid-list';
+import { AreasConocimientoComponent } from './pages/areas-conocimiento/areas-conocimiento.component';
+import { DatosGeneralesComponent } from './pages/datos-generales/datos-generales.component';
 //import { MAT_MOMENT_DATE_FORMATS, MomentDateAdapter } from '@angular/material-moment-adapter';
 //import { MatMomentDateModule } from "@angular/material-moment-adapter";
 
@@ -55,7 +57,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
     CronogramaEspBComponent,
     CronogramaEspCComponent,
     CronogramaEspDComponent,
-    CronogramaEspEComponent
+    CronogramaEspEComponent,
+    AreasConocimientoComponent,
+    DatosGeneralesComponent
   ],
   imports: [
     BrowserModule,

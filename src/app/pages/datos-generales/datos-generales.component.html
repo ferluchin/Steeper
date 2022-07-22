@@ -1,0 +1,172 @@
+<form [formGroup]="informacionGeneralFormGroup">
+  <ng-template matStepLabel>Ingresa Datos Generales</ng-template>
+
+  <div class="container">
+    <div class="row">
+
+      <mat-form-field appearance="fill">
+        <mat-label>Título</mat-label>
+        <input matInput placeholder="Título del Proyecto" formControlName="tituloCtrl" required>
+      </mat-form-field>
+
+
+      <mat-form-field appearance="fill">
+        <mat-label>Facultad</mat-label>
+        <!-- <input matInput placeholder="Facultad" formControlName="tituloCtrl" required> -->
+        <mat-select id="facultad" value=formData.facultad onChange=handleChange name="facultad" class="form-select">
+          <mat-option value="">-- Elija un Elemento --</mat-option>
+          <mat-option value="Ciencias Económicas y Empresariales">Ciencias Económicas y Empresariales
+          </mat-option>
+          <mat-option value="Ciencias de la Salud">Ciencias de la Salud</mat-option>
+          <mat-option value="Ciencias Exactas y Naturales">Ciencias Exactas y Naturales</mat-option>
+          <mat-option value="Ingenierías y Arquitectura">Ingenierías y Arquitectura</mat-option>
+          <mat-option value="Ciencias Sociales, Educación y Humanidades">Ciencias Sociales, Educación
+            y
+            Humanidades</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Departamento</mat-label>
+
+        <!-- <input matInput placeholder="Departamento" formControlName="departamentoCtrl" required> -->
+        <mat-select id="departamento" value=formData.departamento onChange=handleChange name="departamento"
+          class="form-select">
+          <mat-option value="">-- Elija un Elemento --</mat-option>
+          <mat-option value="Química">Química</mat-option>
+          <mat-option value="Geociencias">Geociencias</mat-option>
+          <mat-option value="Ciencias de la Salud">Ciencias de la Salud</mat-option>
+          <mat-option value="Economía">Economía</mat-option>
+          <mat-option value="Ciencias Empresariales.">Ciencias Empresariales.</mat-option>
+          <mat-option value="Ingeniería Civil.">Ingeniería Civil.</mat-option>
+          <mat-option value="Arquitectura y Urbanismo.">Arquitectura y Urbanismo.</mat-option>
+          <mat-option value="Ciencias de la Computación y Telecomunicaciones.">Ciencias de la
+            Computación y
+            Telecomunicaciones.</mat-option>
+          <mat-option value="Ciencias Biológicas y Agropecuarias.">Ciencias Biológicas y
+            Agropecuarias.
+          </mat-option>
+          <mat-option value="Producción.">Producción.</mat-option>
+          <mat-option value="Ciencias de la Educación">Ciencias de la Educación.</mat-option>
+          <mat-option value="Ciencias de la Comunicación">Ciencias de la Comunicación.</mat-option>
+          <mat-option value="Filosofía, Artes y Humanidades">Filosofía, Artes y Humanidades.
+          </mat-option>
+          <mat-option value="Psicología">Psicología.</mat-option>
+          <mat-option value="Ciencias Jurídicas">Ciencias Jurídicas.</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
+
+    </div>
+    <div class="row">
+
+      <mat-form-field appearance="fill">
+        <mat-label>Fecha de Inicio</mat-label>
+        <input matInput [matDatepicker]="picker1">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker touchUi #picker1></mat-datepicker>
+      </mat-form-field>
+
+
+      <mat-form-field appearance="fill">
+        <mat-label>Fecha Finalización</mat-label>
+        <input matInput [matDatepicker]="picker2">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker touchUi #picker2></mat-datepicker>
+      </mat-form-field>
+
+
+
+      <mat-form-field appearance="fill">
+        <mat-label>Duración del Proyecto en Semanas</mat-label>
+
+        <input matInput type="number" placeholder="0" formControlName="duracionSemanasCtrl">
+      </mat-form-field>
+
+
+    </div>
+    <div class="row">
+
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Alcance territorial</mat-label>
+        <mat-select id="alcanceTerritorial" value=formData.alcanceTerritorial onChange=handleChange
+          name="alcanceTerritorial" class="form-select">
+          <mat-option value="">-- Elija un Elemento --</mat-option>
+          <mat-option value="Nacional.">Nacional.</mat-option>
+          <mat-option value="Provincial.">Provincial.</mat-option>
+          <mat-option value="Cantonal.">Cantonal.</mat-option>
+          <mat-option value="Parroquial.">Parroquial.</mat-option>
+          <mat-option value="Institucional.">Institucional.</mat-option>
+          <mat-option value="Internacional.">Internacional.</mat-option>
+        </mat-select>
+        <!-- <input matInput type="text" placeholder="Alcance Territorial" formControlName="duracionSemanasCtrl"> -->
+      </mat-form-field>
+
+
+    </div>
+
+    <div class="row">
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Cédula director Proyecto</mat-label>
+        <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl"
+          [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of options" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+
+    </div>
+    <div class="row">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="nombreDirectorProyecto">
+          <th mat-header-cell *matHeaderCellDef> Nombres Completos </th>
+          <td mat-cell *matCellDef="let element"> {{element.nombreDirectorProyecto}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="identificacionDirectorProyecto">
+          <th mat-header-cell *matHeaderCellDef> Identificación </th>
+          <td mat-cell *matCellDef="let element"> {{element.identificacionDirectorProyecto}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="telefonoDirectorProyecto">
+          <th mat-header-cell *matHeaderCellDef> Teléfono </th>
+          <td mat-cell *matCellDef="let element"> {{element.telefonoDirectorProyecto}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="correoDirectorProyecto">
+          <th mat-header-cell *matHeaderCellDef> Correo </th>
+          <td mat-cell *matCellDef="let element"> {{element.correoDirectorProyecto}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </div>
+
+
+
+  <div>
+
+    <button mat-button matStepperNext>Next</button>
+  </div>
+</form>
