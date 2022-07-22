@@ -1,0 +1,246 @@
+<div class="metodologia-proyecto">
+  <div class="main-body">
+
+    <!-- <Split
+                    sizes={[20, 80]}
+                    direction="horizontal"
+                    class="split"
+                    minSize={100}
+                    expandToMin={false}
+                    dragInterval={1}
+                    cursor="col-resize"
+                >
+                    <Sidebar
+                    /> -->
+    <!-- <as-split [disabled]="true" direction="horizontal">
+      <as-split-area [size]="20" style="background: white">
+        <app-sidebar></app-sidebar>
+      </as-split-area>
+      <as-split-area [size]="80">
+
+            <app-titlebar></app-titlebar> -->
+
+    <!-- <TitleBar />
+                            {/* <NavBar /> */} -->
+    <section>
+      <form class="form" onSubmit={handleSubmit}>
+        <Button type="button" onClick={logeoDatos} class="btn btn-primary">
+          Consola
+        </Button>
+
+        <div class="container">
+
+          <div class="row">
+            <div class="col-4">
+              <h4> 2.6 Metodología</h4>
+
+            </div>
+            <div class="col-8">
+              <textarea
+                placeholder="Describir de manera sintética los métodos y técnicas necesarias para alcanzar sus objetivos"
+                onChange={handleChange} name="metodologia">
+                                        </textarea>
+            </div>
+          </div>
+
+
+          <br />
+          <div class="row">
+            <div class="col-6">
+              <h4>
+                2.7 Transferecia de conocimiento
+              </h4>
+
+            </div>
+          </div>
+
+          <br />
+          <div class="row">
+            <div class="col-4">
+              <h5>
+                Artículo Científico
+              </h5>
+            </div>
+            <mat-form-field appearance="fill">
+              <mat-label>Identificación</mat-label>
+
+              <mat-select id="articuloCientifico" onChange={handleChange} name="articuloCientifico" class="form-select">
+                <mat-option value="">-- Elija un Elemento --</mat-option>
+                <mat-option value="SI">SI</mat-option>
+                <mat-option value="NO">NO</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-4">
+              <h5>
+                Prototipo
+              </h5>
+            </div>
+            <mat-form-field appearance="fill">
+              <mat-label>Identificación</mat-label>
+              <mat-select id="prototipo" onChange={handleChange} name="prototipo" class="form-select">
+                <mat-option value="">-- Elija un Elemento --</mat-option>
+                <mat-option value="SI">SI</mat-option>
+                <mat-option value="NO">NO</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <br />
+          <div class="row">
+
+            <div class="col-4">
+              <h5>
+                Registro de Propiedad Industrial
+              </h5>
+            </div>
+            <mat-form-field appearance="fill">
+              <mat-label>Identificación</mat-label>
+              <mat-select id="registroPropiedadIndustrial" value={formData.registroPropiedadIndustrial}
+                onChange={handleChange} name="registroPropiedadIndustrial" class="form-select">
+                <mat-option value="">-- Elija un Elemento --</mat-option>
+                <mat-option value="SI">SI</mat-option>
+                <mat-option value="NO">NO</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <br />
+          <div class="row">
+
+            <div class="col-4">
+              <h5>
+                Otros
+              </h5>
+            </div>
+            <mat-form-field appearance="fill">
+              <mat-label>Identificación</mat-label>
+              <input required matInput type="text" placeholder="Detallar si aplica. " class="form--input"
+                name="otrosTransferenciaConocimiento" onChange={handleChange} />
+            </mat-form-field>
+          </div>
+
+          <br />
+          <div class="row">
+            <div class="col-12">
+              <h4> 2.8 Impactos del Proyecto</h4>
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-4">
+
+              <h5>
+                Impacto Social.
+              </h5>
+            </div>
+            <div class="col-8">
+
+              <input required matInput type="text" placeholder="Su proyecto tendrá el siguiente impacto "
+                class="form--input" name="impactoSocial" onChange={handleChange} />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4">
+
+              <h5>
+                Impacto Científico
+              </h5>
+
+            </div>
+
+
+            <mat-form-field appearance="fill">
+              <mat-label>Identificación</mat-label>
+              <input required matInput type="text" placeholder="Su proyecto tendrá el siguiente impacto "
+                class="form--input" name="impactoCientifico" onChange={handleChange} />
+            </mat-form-field>
+
+          </div>
+
+          <div class="row">
+            <div class="col-4">
+
+              <h5>
+                Impacto Económico
+              </h5>
+            </div>
+            <mat-form-field appearance="fill">
+              <mat-label>Identificación</mat-label>
+
+              <input required matInput type="text" placeholder="Su proyecto tendrá el siguiente impacto"
+                class="form--input" name="impactoEconomico" onChange={handleChange} />
+            </mat-form-field>
+          </div>
+          <div class="row">
+            <div class="col-4">
+
+              <h5>
+                Impacto Político
+              </h5>
+            </div>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Identificación</mat-label>
+
+              <input required matInput type="text" placeholder="Su proyecto tendrá el siguiente impacto "
+                class="form--input" name="impactoPolitico" onChange={handleChange} />
+            </mat-form-field>
+
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <h5>
+                Otro Impacto
+              </h5>
+            </div>
+            <mat-form-field appearance="fill">
+              <mat-label>Identificación</mat-label>
+
+              <input required matInput type="otroImpacto" placeholder="Su proyecto tendrá el siguiente impacto"
+                class="form--input" name="otroImpacto" onChange={handleChange} />
+            </mat-form-field>
+
+          </div>
+
+          <div class="row">
+            <div class="col-4">
+              <h4> 2.9 Descripción de Actividad I+D</h4>
+
+            </div>
+            <div class="col-8">
+              <textarea matInput required name="descripcionActividadID" placeholder="Descripción de la actividad" onChange={handleChange}>
+                                    </textarea>
+            </div>
+          </div>
+
+          <br />
+          <div class="row">
+            <div class="col-4">
+              <h4> 2.10 Aspectos Bioéticos</h4>
+
+            </div>
+            <div class="col-8">
+              <textarea matInput required name="aspectosBioeticos" placeholder="Su proyecto requiere aprobación de un comité de bioética"
+                onChange={handleChange}>
+                                    </textarea>
+            </div>
+          </div>
+
+
+          <br />
+        </div>
+
+        <button class="btn btn-primary">
+          Enviar Información
+        </button>
+      </form>
+
+    </section>
+    <!-- </as-split-area>
+    </as-split> -->
+    <!-- </Split> -->
+  </div>
+
+</div>

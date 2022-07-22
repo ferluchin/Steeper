@@ -1,0 +1,183 @@
+<div class="informacion-tecnica">
+  <div class="main-body">
+    <!-- <as-split [disabled]="true" direction="horizontal">
+      <as-split-area [size]="20" style="background: white">
+        <app-sidebar></app-sidebar>
+      </as-split-area>
+      <as-split-area [size]="80"> -->
+    <section>
+      <form class="form" onSubmit=handleSubmit>
+        <!-- <TitleBar /> -->
+        <!-- <app-titlebar></app-titlebar> -->
+
+        <div class="container">
+
+          <h2> 2. Información Técnica del Proyecto</h2>
+          <div class="row">
+            <div class="col-3">
+              <h4> 2.1 Resúmen del Proyecto</h4>
+            </div>
+
+            <mat-form-field>
+              <textarea matInput required name="resumenProyecto"
+                placeholder="Realizar una síntesis clara y concisa del proyecto (máximo 150 palabras)"
+                onChange=handleChange></textarea> 
+            </mat-form-field>
+
+            </div>
+          </div>
+
+
+          <h3> 2.2 Palabras Clave</h3>
+          <div class="row">
+            <mat-form-field appearance="fill">
+              <mat-label>Palabra Clave 1</mat-label>
+              <input required matInput type="text" placeholder="Keywords" class="form--input" name="palabraClave1"
+                onChange=handleChange />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Palabra Clave 2</mat-label>
+              <input required matInput type="text" placeholder="Keywords" class="form--input" name="palabraClave2"
+                onChange=handleChange />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Palabra Clave 3</mat-label>
+              <input required matInput type="text" placeholder="Keywords" class="form--input" name="palabraClave3"
+                onChange=handleChange />
+            </mat-form-field>
+
+
+            <mat-form-field appearance="fill">
+              <mat-label>Palabra Clave 4</mat-label>
+              <input required matInput type="text" placeholder="Keywords" class="form--input" name="palabraClave4"
+                onChange=handleChange />
+
+            </mat-form-field>
+
+
+
+            <h4> 2.3 Introducción </h4>
+
+            <div class="row">
+              <div class="col-3">
+                <h4> a. Antecedentes </h4>
+
+              </div>
+
+            <mat-form-field>
+
+                <textarea matInput required name="introduccionAntecedentes" placeholder="Máximo 500 palabras"
+                  onChange=handleChange>
+                                        </textarea>
+            </mat-form-field>
+
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-3">
+              <h4> b. Justificación </h4>
+
+            </div>
+            <mat-form-field>
+
+              <textarea matInput required name="introduccionJustificacion" placeholder="Máximo 500 palabras"
+                onChange=handleChange>
+                                        </textarea>
+            </mat-form-field>
+          </div>
+
+
+          <h4> 2.4 Principales Equipos </h4>
+          <br />
+          <mat-grid-list cols="2" rowHeight="100px">
+            <mat-grid-tile>
+
+              <h4> Nombre Equipo </h4>
+            </mat-grid-tile>
+            <mat-grid-tile>
+
+              <h4> Ubicación (Laboratorio) </h4>
+            </mat-grid-tile>
+            <mat-grid-tile>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Nombre Equipo</mat-label>
+                <input required matInput type="text" placeholder="Nombre Equipo" class="form--input"
+                  name="nombreEquipo1" onChange=handleChange />
+              </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+              <mat-form-field appearance="fill">
+                <mat-label>Ubicación</mat-label>
+                <input required matInput type="text" placeholder="Ubicación" class="form--input" name="ubicacionEquipo3"
+                  onChange=handleChange />
+              </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Nombre Equipo</mat-label>
+                <input required matInput type="text" placeholder="Nombre Equipo" class="form--input"
+                  name="nombreEquipo1" onChange=handleChange />
+              </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+              <mat-form-field appearance="fill">
+                <mat-label>Ubicación</mat-label>
+                <input required matInput type="text" placeholder="Ubicación" class="form--input" name="ubicacionEquipo3"
+                  onChange=handleChange />
+              </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Nombre Equipo</mat-label>
+                <input required matInput type="text" placeholder="Nombre Equipo" class="form--input"
+                  name="nombreEquipo1" onChange=handleChange />
+              </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+              <mat-form-field appearance="fill">
+                <mat-label>Ubicación</mat-label>
+                <input required matInput type="text" placeholder="Ubicación" class="form--input" name="ubicacionEquipo3"
+                  onChange=handleChange />
+              </mat-form-field>
+            </mat-grid-tile>
+
+          </mat-grid-list>
+          <br />
+
+          <h4> 2.5 Objetivos del Proyecto.</h4>
+          <br />
+          <div class="row">
+            <div class="col-3">
+              <h4> Objetivo General: </h4>
+
+            </div>
+            <mat-form-field>
+              <textarea matInput required name="objetivoGeneral" placeholder="Detallar" onChange=handleChange>
+                                        </textarea>
+            </mat-form-field>
+          </div>
+          <br />
+
+        </div>
+
+        <button class="btn btn-primary">
+          Enviar Información
+        </button>
+      </form>
+    </section>
+    <!--
+      </as-split-area>
+    </as-split> -->
+    <!-- </Split> -->
+  </div>
+</div>

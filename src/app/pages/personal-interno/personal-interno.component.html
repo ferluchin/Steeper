@@ -1,0 +1,364 @@
+<div>
+
+  <div class="col-12">
+    <h2>
+      Equipo del Proyecto - Personal Interno
+    </h2>
+    <br />
+
+    <br />
+  </div>
+
+  <!-- <div class="container">
+    <div class="row">
+      <div class="col-2">
+        <label>
+          ROL
+        </label>
+      </div>
+
+      <div class="col-2">
+        <label>
+          Tipo
+        </label>
+      </div>
+      <div class="col-2">
+        <label>
+          Investigadores Acreditados Senescyt
+        </label>
+      </div>
+
+      <div class="col-2">
+        <label>
+          Identificación
+        </label>
+      </div>
+
+      <div class="col-2">
+        <label>
+          Nombres y Apellidos
+        </label>
+      </div>
+
+      <div class="col-1">
+        <label>
+          Horas semanales de Participación
+        </label>
+      </div>
+
+      <div class="col-1">
+        <label>
+          Total horas Participación
+        </label>
+      </div>
+    </div>
+  </div> -->
+
+  <hr />
+  <div class="container">
+    <div class="row">
+      <mat-form-field appearance="fill">
+        <mat-label>ROL</mat-label>
+        <mat-select id="rolPersonalInterno1" value=formData.rolPersonalInterno1 onChange=handleChange
+          name="rolPersonalInterno1" class="form-select">
+          <mat-option value="">-- Elija un Elemento --</mat-option>
+          <mat-option value="Dirección">Dirección</mat-option>
+          <mat-option value="Co-Dirección">Co-Dirección</mat-option>
+          <mat-option value="Participación">Participación</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Tipo</mat-label>
+        <mat-select id="tipoPersonalInterno1" value=formData.tipoPersonalInterno1 onChange=handleChange
+          name="tipoPersonalInterno1" class="form-select">
+          <mat-option value="">-- Elija un Elemento --</mat-option>
+          <mat-option value="Docente a tiempo completo">Docente a tiempo completo</mat-option>
+          <mat-option value="Estudiante">Estudiante</mat-option>
+          <mat-option value="Técnico Docente">Técnico Docente</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Investigadores Acreditados Senescyt</mat-label>
+        <mat-select
+        id="senescyt1"
+        value=formData.senescyt1
+        onChange=handleChange
+        name="senescyt1"
+        class="form-select"
+        required
+        >
+          <mat-option value="">-- Elija un Elemento --</mat-option>
+          <mat-option value="SI">SI</mat-option>
+          <mat-option value="NO">NO</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Identificación</mat-label>
+        <input required matInput type="number" placeholder="0000000000" class="form-control"
+          name="identificacionPersonalInterno1" onChange=handleChange value=formData.identificacionPersonalInterno1 />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Nombres y Apellidos</mat-label>
+        <input required matInput type="text" placeholder="Ingresar Texto" class="form-control" name="nombrePersonalInterno1"
+          onChange=handleChange  />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Total Horas Semanales</mat-label>
+        <input matInput type="number" placeholder="00" min=0 class="form-control" name="horasSemanalesPersonalInterno1"
+          onChange=handleChange value=formData.horasSemanalesPersonalInterno1 />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Horas Totales</mat-label>
+        <input required matInput type="number" placeholder="00" min=0 class="form-control" name="horasTotalesPersonalInterno1"
+          onChange=handleChange value=formData.horasTotalesPersonalInterno1 />
+      </mat-form-field>
+    </div>
+
+
+
+    <br />
+
+    <div class="row">
+
+      <mat-form-field appearance="fill">
+        <mat-label>ROL</mat-label>
+        <mat-select id="rolPersonalInterno2" value=formData.rolPersonalInterno2 onChange=handleChange
+          name="rolPersonalInterno2" class="form-select">
+          <mat-option value="">-- Elija un Elemento --</mat-option>
+          <mat-option value="Dirección">Dirección</mat-option>
+          <mat-option value="Co-Dirección">Co-Dirección</mat-option>
+          <mat-option value="Participación">Participación</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Tipo</mat-label>
+        <mat-select id="tipoPersonalInterno2" value=formData.tipoPersonalInterno2 onChange=handleChange
+          name="tipoPersonalInterno2" class="form-select">
+          <mat-option value="">-- Elija un Elemento --</mat-option>
+          <mat-option value="Docente a tiempo completo">Docente a tiempo completo</mat-option>
+          <mat-option value="Estudiante">Estudiante</mat-option>
+          <mat-option value="Técnico Docente">Técnico Docente</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Investigadores Acreditados SENESCYT</mat-label>
+        <mat-select id="senescyt2" value=formData.senescyt2 onChange=handleChange name="senescyt2" class="form-select">
+          <mat-option value="">-- Elija un Elemento --</mat-option>
+          <mat-option value="SI">SI</mat-option>
+          <mat-option value="NO">NO</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Identificación</mat-label>
+        <input matInput type="number" placeholder="0000000000" class="form-control"
+          name="identificacionPersonalInterno2" onChange=handleChange value=formData.identificacionPersonalInterno2 />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Nombres y Apellidos</mat-label>
+        <input matInput type="text" placeholder="Ingresar Texto" class="form-control" name="nombrePersonalInterno2"
+          onChange=handleChange />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Horas Semanales</mat-label>
+        <input matInput type="number" placeholder="00" min=0 class="form-control" name="horasSemanalesPersonalInterno2"
+          onChange=handleChange value=formData.horasSemanalesPersonalInterno2 />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Horas Totales</mat-label>
+        <input matInput type="number" placeholder="00" min=0 class="form-control" name="horasTotalesPersonalInterno2"
+          onChange=handleChange value=formData.horasTotalesPersonalInterno2 />
+      </mat-form-field>
+
+    </div>
+
+    <br />
+
+    <div class="row">
+      <mat-form-field appearance="fill">
+        <mat-label>ROL</mat-label>
+        <mat-select id="rolPersonalInterno3" value=formData.rolPersonalInterno3 onChange=handleChange
+          name="rolPersonalInterno3" class="form-select">
+          <mat-option value="">-- Elija un Elemento --</mat-option>
+          <mat-option value="Dirección">Dirección</mat-option>
+          <mat-option value="Co-Dirección">Co-Dirección</mat-option>
+          <mat-option value="Participación">Participación</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Tipo</mat-label>
+        <mat-select id="tipoPersonalInterno3" value=formData.tipoPersonalInterno3 onChange=handleChange
+          name="tipoPersonalInterno3" class="form-select">
+          <mat-option value="">-- Elija un Elemento --</mat-option>
+          <mat-option value="Docente a tiempo completo">Docente a tiempo completo</mat-option>
+          <mat-option value="Estudiante">Estudiante</mat-option>
+          <mat-option value="Técnico Docente">Técnico Docente</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Investigadores Acreditados Senescyt</mat-label>
+        <mat-select id="senescyt3" value=formData.senescyt3 onChange=handleChange name="senescyt3" class="form-select">
+          <mat-option value="">-- Elija un Elemento --</mat-option>
+          <mat-option value="SI">SI</mat-option>
+          <mat-option value="NO">NO</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Identificación</mat-label>
+        <input matInput type="number" placeholder="0000000000" class="form-control"
+          name="identificacionPersonalInterno3" onChange=handleChange value=formData.identificacionPersonalInterno3 />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Nombres y Apellidos</mat-label>
+        <input matInput type="text" placeholder="Ingresar Texto" class="form-control" name="nombrePersonalInterno3"
+          onChange=handleChange  />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Horas Semanales</mat-label>
+        <input matInput type="number" placeholder="00" min=0 class="form-control" name="horasSemanalesPersonalInterno3"
+          onChange=handleChange value=formData.horasSemanalesPersonalInterno3 />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Horas Totales</mat-label>
+        <input matInput type="number" placeholder="00" min=0 class="form-control" name="horasTotalesPersonalInterno3"
+          onChange=handleChange value=formData.horasTotalesPersonalInterno3 />
+      </mat-form-field>
+    </div>
+
+    <br />
+
+    <div class="row">
+      <mat-form-field appearance="fill">
+        <mat-label>ROL</mat-label>
+        <mat-select id="rolPersonalInterno4" value=formData.rolPersonalInterno4 onChange=handleChange
+          name="rolPersonalInterno4" class="form-select">
+          <mat-option value="">-- Elija un Elemento --</mat-option>
+          <mat-option value="Dirección">Dirección</mat-option>
+          <mat-option value="Co-Dirección">Co-Dirección</mat-option>
+          <mat-option value="Participación">Participación</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
+      <mat-form-field appearance="fill">
+        <mat-label>Tipo</mat-label>
+        <mat-select id="tipoPersonalInterno4" value=formData.tipoPersonalInterno4 onChange=handleChange
+          name="tipoPersonalInterno4" class="form-select">
+          <mat-option value="">-- Elija un Elemento --</mat-option>
+          <mat-option value="Docente a tiempo completo">Docente a tiempo completo</mat-option>
+          <mat-option value="Estudiante">Estudiante</mat-option>
+          <mat-option value="Técnico Docente">Técnico Docente</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Investigador Acreditado Senescyt</mat-label>
+        <mat-select id="senescyt4" value=formData.senescyt4 onChange=handleChange name="senescyt4" class="form-select">
+          <mat-option value="">-- Elija un Elemento --</mat-option>
+          <mat-option value="SI">SI</mat-option>
+          <mat-option value="NO">NO</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Identificación</mat-label>
+        <input matInput type="number" placeholder="0000000000" class="form-control"
+          name="identificacionPersonalInterno4" onChange=handleChange value=formData.identificacionPersonalInterno4 />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Nombres y Apellidos</mat-label>
+        <input matInput type="text" placeholder="Ingresar Texto" class="form-control" name="nombrePersonalInterno4"
+          onChange=handleChange  />
+      </mat-form-field>
+
+
+      <mat-form-field appearance="fill">
+        <mat-label>Horas Semanales</mat-label>
+        <input matInput type="number" placeholder="00" min=0 class="form-control" name="horasSemanalesPersonalInterno4"
+          onChange=handleChange value=formData.horasSemanalesPersonalInterno4 />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Horas Totales</mat-label>
+        <input matInput type="number" placeholder="00" min=0 class="form-control" name="horasTotalesPersonalInterno4"
+          onChange=handleChange value=formData.horasTotalesPersonalInterno4 />
+      </mat-form-field>
+    </div>
+
+    <br />
+
+    <mat-form-field appearance="fill">
+      <mat-label>ROL</mat-label>
+      <mat-select id="rolPersonalInterno5" value=formData.rolPersonalInterno5 onChange=handleChange
+        name="rolPersonalInterno5" class="form-select">
+        <mat-option value="">-- Elija un Elemento --</mat-option>
+        <mat-option value="Dirección">Dirección</mat-option>
+        <mat-option value="Co-Dirección">Co-Dirección</mat-option>
+        <mat-option value="Participación">Participación</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Tipo</mat-label>
+      <mat-select id="tipoPersonalInterno5" value=formData.tipoPersonalInterno5 onChange=handleChange
+        name="tipoPersonalInterno5" class="form-select">
+        <mat-option value="">-- Elija un Elemento --</mat-option>
+        <mat-option value="Docente a tiempo completo">Docente a tiempo completo</mat-option>
+        <mat-option value="Estudiante">Estudiante</mat-option>
+        <mat-option value="Técnico Docente">Técnico Docente</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Investigadores Acreditados Senescyt</mat-label>
+      <mat-select id="senescyt5" value=formData.senescyt5 onChange=handleChange name="senescyt5" class="form-select">
+        <mat-option value="">-- Elija un Elemento --</mat-option>
+        <mat-option value="SI">SI</mat-option>
+        <mat-option value="NO">NO</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Identificación</mat-label>
+      <input matInput type="number" placeholder="0000000000" class="form-control" name="identificacionPersonalInterno5"
+        onChange=handleChange value=formData.identificacionPersonalInterno5 />
+    </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Nombres y Apellidos</mat-label>
+      <input matInput type="text" placeholder="Ingresar Texto" class="form-control" name="nombrePersonalInterno5"
+        onChange=handleChange  />
+  </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Horas Semanales</mat-label>
+      <input matInput type="number" placeholder="00" min=0 class="form-control" name="horasSemanalesPersonalInterno5"
+        onChange=handleChange value=formData.horasSemanalesPersonalInterno5 />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Horas Totales</mat-label>
+
+      <input matInput type="number" placeholder="00" min=0 class="form-control" name="horasTotalesPersonalInterno5"
+        onChange=handleChange value=formData.horasTotalesPersonalInterno5 />
+    </mat-form-field>
+  </div>
+</div>

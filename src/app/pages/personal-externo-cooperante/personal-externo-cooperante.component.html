@@ -1,0 +1,207 @@
+<div class="personal-externo-cooperante">
+  <div class="main-body">
+    <!-- <as-split [disabled]="true" direction="horizontal">
+      <as-split-area [size]="20" style="background: white">
+        <app-sidebar></app-sidebar>
+      </as-split-area>
+      <as-split-area [size]="80"> -->
+    <!-- <Split
+                    sizes=[20, 80]
+                    direction="horizontal"
+                    class="split"
+                    minSize=100
+                    expandToMin=false
+                    dragInterval=1
+                    cursor="col-resize"
+                >
+                    <Sidebar
+                    //notes=notes
+                    //currentNote=findCurrentNote()
+                    //setCurrentNoteId=setCurrentNoteId
+                    //newNote=createNewNote
+                    /> -->
+    <section>
+      <form class="form" onSubmit=handleSubmit>
+        <!-- <TitleBar /> -->
+        <!-- <app-titlebar></app-titlebar> -->
+        <div>
+          <div class="col-12">
+            <h4>
+              Personal Externo Cooperante
+            </h4>
+            <br />
+
+            <div class="container">
+              <hr />
+
+              < div class="row">
+                <div class="col-1">
+                  <label>
+                    01
+                  </label>
+                </div>
+
+                <div class="col-3">
+                  <mat-select id="rolPersonalCooperante1" value=formData.rolPersonalCooperante1 onChange=handleChange
+                    name="rolPersonalCooperante1" class="form-select">
+                    <mat-option value="">-- Elija un Elemento --</mat-option>
+                    <mat-option value="Tutor / Asesor.">Tutor / Asesor.</mat-option>
+                    <mat-option value="Participación.">Participación.</mat-option>
+
+                  </mat-select>
+                </div>
+
+                <mat-form-field appearance="fill">
+                  <mat-label>Nombres Completos</mat-label>
+                  <input matInput type="text" placeholder="Ingresar Texto" class="form-control"
+                    name="nombrePersonalCooperante1" onChange=handleChange value=formData.nombrePersonalCooperante1 />
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                  <mat-label>Entidad</mat-label>
+                  <input matInput type="text" placeholder="Ingresar Texto" class="form-control"
+                    name="entidadPersonalCooperante1" onChange=handleChange value=formData.entidadPersonalCooperante1 />
+                </mat-form-field>
+            </div>
+
+            <br />
+
+            <div class="row">
+              <div class="col-1">
+                <label>
+                  02
+                </label>
+              </div>
+
+              <div class="col-3">
+                <mat-select id="rolPersonalCooperante2" value=formData.rolPersonalCooperante2 onChange=handleChange
+                  name="rolPersonalCooperante2" class="form-select">
+                  <mat-option value="">-- Elija un Elemento --</mat-option>
+                  <mat-option value="Tutor / Asesor.">Tutor / Asesor.</mat-option>
+                  <mat-option value="Participación.">Participación.</mat-option>
+
+                </mat-select>
+              </div>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Identificación</mat-label>
+                <input matInput type="text" placeholder="Ingresar Texto" class="form-control"
+                  name="nombrePersonalCooperante2" onChange=handleChange value=formData.nombrePersonalCooperante2 />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Identificación</mat-label>
+                <input matInput type="text" placeholder="Ingresar Texto" class="form-control"
+                  name="entidadPersonalCooperante2" onChange=handleChange value=formData.entidadPersonalCooperante2 />
+              </mat-form-field>
+            </div>
+
+            <br />
+
+            <div class="row">
+              <div class="col-1">
+                <label>
+                  03
+                </label>
+              </div>
+
+              <div class="col-3">
+                <mat-select id="rolPersonalCooperante3" value=formData.rolPersonalCooperante3 onChange=handleChange
+                  name="rolPersonalCooperante3" class="form-select">
+                  <mat-option value="">-- Elija un Elemento --</mat-option>
+                  <mat-option value="Tutor / Asesor.">Tutor / Asesor.</mat-option>
+                  <mat-option value="Participación.">Participación.</mat-option>
+
+                </mat-select>
+              </div>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Nombres Completos</mat-label>
+                <input matInput type="text" placeholder="Ingresar Texto" class="form-control"
+                  name="nombrePersonalCooperante3" onChange=handleChange value=formData.nombrePersonalCooperante3 />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Entidad</mat-label>
+                <input matInput type="text" placeholder="Ingresar Texto" class="form-control"
+                  name="entidadPersonalCooperante3" onChange=handleChange value=formData.entidadPersonalCooperante3 />
+              </mat-form-field>
+            </div>
+
+            <br />
+
+            <div class="row">
+              <div class="col-1">
+                <label>
+                  04
+                </label>
+              </div>
+
+              <div class="col-3">
+                <mat-select id="rolPersonalCooperante4" value=formData.rolPersonalCooperante4 onChange=handleChange
+                  name="rolPersonalCooperante4" class="form-select">
+                  <mat-option value="">-- Elija un Elemento --</mat-option>
+                  <mat-option value="Tutor / Asesor.">Tutor / Asesor.</mat-option>
+                  <mat-option value="Participación.">Participación.</mat-option>
+
+                </mat-select>
+              </div>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Nombres Completos</mat-label>
+                <input matInput type="text" placeholder="Ingresar Texto" class="form-control"
+                  name="nombrePersonalCooperante4" onChange=handleChange value=formData.nombrePersonalCooperante4 />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Entidad</mat-label>
+                <input matInput type="text" placeholder="Ingresar Texto" class="form-control"
+                  name="entidadPersonalCooperante4" onChange=handleChange value=formData.entidadPersonalCooperante4 />
+              </mat-form-field>
+            </div>
+
+            <br />
+
+            <div class="row">
+              <div class="col-1">
+                <label>
+                  05
+                </label>
+              </div>
+
+              <div class="col-3">
+                <mat-select id="rolPersonalCooperante5" value=formData.rolPersonalCooperante5 onChange=handleChange
+                  name="rolPersonalCooperante5" class="form-select">
+                  <mat-option value="">-- Elija un Elemento --</mat-option>
+                  <mat-option value="Tutor / Asesor.">Tutor / Asesor.</mat-option>
+                  <mat-option value="Participación.">Participación.</mat-option>
+
+                </mat-select>
+              </div>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Nombres Completos</mat-label>
+                <input matInput type="text" placeholder="Ingresar Texto" class="form-control"
+                  name="nombrePersonalCooperante5" onChange=handleChange value=formData.nombrePersonalCooperante5 />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Entidad</mat-label>
+                <input matInput type="text" placeholder="Ingresar Texto" class="form-control"
+                  name="entidadPersonalCooperante5" onChange=handleChange value=formData.entidadPersonalCooperante5 />
+              </mat-form-field>
+            </div>
+          </div>
+
+        </div>
+
+        <br />
+        <button class="btn btn-primary">
+          Enviar Información
+        </button>
+      </form>
+    </section>
+    <!-- </as-split-area>
+    </as-split> -->
+    <!-- </Split> -->
+  </div>
