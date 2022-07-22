@@ -1,0 +1,105 @@
+<div class="container">
+  <div class="row">
+    <h4>
+      Tipo de Proyecto.
+    </h4>
+
+    <mat-form-field appearance="fill">
+      <mat-label>
+        Tipo de Proyecto:
+      </mat-label>
+      <mat-select id="tipoProyecto" value=formData.tipoProyecto onChange=handleChange name="tipoProyecto"
+        class="form-select" required>
+        <mat-option value="">-- Elija un Elemento --</mat-option>
+        <mat-option value="Investigación"> Investigación. </mat-option>
+        <mat-option value="Innovación"> Innovación. </mat-option>
+        <mat-option value="Consultoría"> Consultoría. </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>
+        Tipo de Investigación:
+      </mat-label>
+      <mat-select id="tipoInvestigacion" value=formData.tipoInvestigacion onChange=handleChange name="tipoInvestigacion"
+        class="form-select" required>
+        <mat-option value="">-- Elija un Elemento --</mat-option>
+        <mat-option value="Investigación Básica."> Investigación Básica. </mat-option>
+        <mat-option value="Investigación Aplicada."> Investigación Aplicada. </mat-option>
+        <mat-option value="Desarrollo Experimental."> Desarrollo Experimental. </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>
+        Tipo de Financiamiento:
+      </mat-label>
+      <mat-select id="tipoFinanciamiento" value=formData.tipoFinanciamiento onChange=handleChange
+        name="tipoFinanciamiento" class="form-select" required>
+        <mat-option value="">
+          -- Elija un Elemento --
+        </mat-option>
+        <mat-option value="ASIGNACIÓN REGULAR IES.">
+          ASIGNACIÓN REGULAR IES.
+        </mat-option>
+        <mat-option value="FONDOS CONCURSABLES INTERNO IES.">FONDOS CONCURSABLES INTERNO IES. </mat-option>
+        <mat-option value="FONDOS CONCURSABLES NACIONALES.">FONDOS CONCURSABLES NACIONALES. </mat-option>
+        <mat-option value="FONDOS CONSURSABLES INTERNACIONALES">FONDOS CONSURSABLES INTERNACIONALES.
+        </mat-option>
+
+        <mat-option value="ASIGNACIÓN REGULAR IES/FONDOS CONCURSABLES INTERNO IES.">ASIGNACIÓN REGULAR
+          IES/FONDOS CONCURSABLES INTERNO IES. </mat-option>
+        <mat-option value="ASIGNACIÓN REGULAR IES/FONDOS CONCURSABLES NACIONALES.">ASIGNACIÓN REGULAR
+          IES/FONDOS
+          CONCURSABLES NACIONALES. </mat-option>
+        <mat-option value="ASIGNACIÓN REGULAR IES/FONDOS CONCURSABLES INTERNACIONALES.">ASIGNACIÓN REGULAR
+          IES/FONDOS CONCURSABLES INTERNACIONALES. </mat-option>
+
+        <mat-option value="FONDOS CONCURSABLES INTERNO IES/ FONDOS CONCURSABLE NACIONALES.">FONDOS
+          CONCURSABLES
+          INTERNO IES/ FONDOS CONCURSABLE NACIONALES. </mat-option>
+        <mat-option value="FONDOS CONCURSABLES INTERNO IES/ FONDOS CONCURSABLE SINTERNACIONALES.">FONDOS
+          CONCURSABLES INTERNO IES/ FONDOS CONCURSABLE SINTERNACIONALES. </mat-option>
+        <mat-option value="FONDOS CONCURSABLE INTERNO NACIONALES/FONDOS CONCURSABLES INTERNACIONALES">FONDOS
+          CONCURSABLE INTERNO NACIONALES/FONDOS CONCURSABLES INTERNACIONALES </mat-option>
+        <mat-option
+          value="ASIGNACION REGULAR IES/FONDOS CONCURSABLES INTERNO IES/ FONDO CONCURSABLES INTERNO NACIONALES/FONDOS CONCURSABLES INTERNACIONALES ">
+          ASIGNACION REGULAR IES/FONDOS CONCURSABLES INTERNO IES/ FONDO CONCURSABLES INTERNO
+          NACIONALES/FONDOS CONCURSABLES INTERNACIONALES </mat-option>
+
+      </mat-select>
+    </mat-form-field>
+
+
+  </div>
+  <div class="row">
+
+    <mat-form-field class="full-width" appearance="fill">
+      <mat-label>ORGANISMO (S)/ENTIDAD (ES) FINANCIADOR (ES):</mat-label>
+      <input matInput placeholder="ORGANISMO (S)/ENTIDAD (ES) FINANCIADOR (ES):"
+        formControlName="organismoEntidadFinanciador" required>
+    </mat-form-field>
+
+  </div>
+
+  <div class="row">
+
+    <mat-form-field appearance="fill">
+      <mat-label>Aporte UTPL</mat-label>
+
+      <input matInput type="number" min=0 placeholder="Ingresar Valor" class="form--input" required />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Aporte Contraparte</mat-label>
+
+      <input matInput type="number" min=0 placeholder="Ingresar Valor" class="form--input" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Presupuesto Total</mat-label>
+
+      <input matInput type="number" min=0 placeholder="Ingresar Valor" class="form--input" required />
+    </mat-form-field>
+
+  </div>
+</div>

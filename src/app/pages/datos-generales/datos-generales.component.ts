@@ -49,6 +49,8 @@ export class DatosGeneralesComponent {
 
     nombreCtrl: ['', Validators.required],
     apellidoCtrl: ['', Validators.required],
+
+    objetivoGeneralCtrl: ['', Validators.required],
   });
 
   options: string[] = ['One', 'Two', 'Three'];

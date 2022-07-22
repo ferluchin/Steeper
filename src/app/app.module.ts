@@ -40,6 +40,7 @@ import { TextFieldModule } from '@angular/cdk/text-field';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { AreasConocimientoComponent } from './pages/areas-conocimiento/areas-conocimiento.component';
 import { DatosGeneralesComponent } from './pages/datos-generales/datos-generales.component';
+import { DatosInformativosInvestigacionComponent } from './pages/datos-informativos-investigacion/datos-informativos-investigacion.component';
 //import { MAT_MOMENT_DATE_FORMATS, MomentDateAdapter } from '@angular/material-moment-adapter';
 //import { MatMomentDateModule } from "@angular/material-moment-adapter";
 
@@ -59,7 +60,8 @@ import { DatosGeneralesComponent } from './pages/datos-generales/datos-generales
     CronogramaEspDComponent,
     CronogramaEspEComponent,
     AreasConocimientoComponent,
-    DatosGeneralesComponent
+    DatosGeneralesComponent,
+    DatosInformativosInvestigacionComponent
   ],
   imports: [
     BrowserModule,
