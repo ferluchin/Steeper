@@ -10,7 +10,8 @@ import { PersonalInternoComponent } from './pages/personal-interno/personal-inte
 import { ResumenPresupuestoComponent } from './pages/resumen-presupuesto/resumen-presupuesto.component';
 
 const routes: Routes = [
-  { path: 'info', component: InformacionGeneralComponent },
+
+  { path: '', component: InformacionGeneralComponent },
   { path: 'personal-interno', component: PersonalInternoComponent },
   { path: 'personal-externo-cooperante', component: PersonalExternoCooperanteComponent },
   { path: 'personal-externo-contratar', component: PersonalExternoContratarComponent },
