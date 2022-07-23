@@ -1,37 +1,29 @@
 <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
-  {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+  {{ !isLinear ? "Enable linear mode" : "Disable linear mode" }}
 </button>
 <mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
   <!-- INFORMACION GENERAL -->
   <mat-step [stepControl]="informacionGeneralFormGroup">
-      <ng-template matStepLabel>
-        Informacion General 
-      </ng-template>
+    <ng-template matStepLabel>
+      Informacion General
+    </ng-template>
 
     <mat-tab-group mat-align-tabs="center">
       <mat-tab label="Datos Informativos">
         Datos Informativos
-        <app-datos-generales>
-
-        </app-datos-generales>
+        <app-datos-generales> </app-datos-generales>
       </mat-tab>
       <mat-tab label="Áreas Conocimiento">
         Áreas Conocimiento
         <app-areas-conocimiento></app-areas-conocimiento>
-
       </mat-tab>
 
       <mat-tab label="Personal Interno">
-        Equipo del Proyecto
-        Personal Interno
+        Equipo del Proyecto Personal Interno
 
         <app-personal-interno></app-personal-interno>
-
-
       </mat-tab>
       <mat-tab label="Personal Externo Cooperante">
-
-
         <app-personal-externo-cooperante></app-personal-externo-cooperante>
       </mat-tab>
 
@@ -40,38 +32,28 @@
       </mat-tab>
       <mat-tab label="Información Técnica">
         Información Técnica
+        <app-informacion-tecnica-proyecto></app-informacion-tecnica-proyecto>
       </mat-tab>
 
       <mat-tab label="Transferencia de Conocimiento">
         Transferencia de Conocimiento
       </mat-tab>
 
-      <mat-tab label="Bibliografía">
-        Bibliografía
-      </mat-tab>
-      <mat-tab label="Observaciones">
-        Observaciones
-      </mat-tab>
-
+      <mat-tab label="Bibliografía"> Bibliografía </mat-tab>
+      <mat-tab label="Observaciones"> Observaciones </mat-tab>
     </mat-tab-group>
   </mat-step>
 
   <mat-step [stepControl]="secondFormGroup">
     <form [formGroup]="secondFormGroup">
-      <ng-template matStepLabel>
-        Investigación
-      </ng-template>
+      <ng-template matStepLabel> Investigación </ng-template>
 
       <mat-tab-group mat-align-tabs="center">
         <mat-tab label="Datos Informativos Investigación">
-          <h4>
-            Datos Informativos Investigación
-
-          </h4>
+          <h4>Datos Informativos Investigación</h4>
           <!-- <app-areas-conocimiento></app-areas-conocimiento> -->
           <app-datos-informativos-investigacion></app-datos-informativos-investigacion>
         </mat-tab>
-
 
         <mat-tab label="Metodología">
           Metodología
@@ -93,11 +75,7 @@
           Cronograma de Actividades
           <app-cronograma-esp-a></app-cronograma-esp-a>
         </mat-tab>
-
-
-
       </mat-tab-group>
-
 
       <div>
         <button mat-button matStepperPrevious>Back</button>
@@ -110,33 +88,21 @@
     <form [formGroup]="vinculacionFormGroup">
       <ng-template matStepLabel>Vinculación</ng-template>
       <mat-tab-group mat-align-tabs="center">
-        <mat-tab label="Datos Informativos">
-          Datos Informativos
-
-        </mat-tab>
+        <mat-tab label="Datos Informativos"> Datos Informativos </mat-tab>
         <mat-tab label="Organización Demandante">
           Organización Demandante
-
         </mat-tab>
         <mat-tab label="Metodología Vinculación">
-
           Metodología Vinculación
         </mat-tab>
 
         <mat-tab label="Cronograma Vinculacion">
-
           Cronograma Vinculación
         </mat-tab>
 
-        <mat-tab label="Otros Aspectos">
+        <mat-tab label="Otros Aspectos"> Otros Aspectos Vinculación </mat-tab>
 
-          Otros Aspectos Vinculación
-        </mat-tab>
-
-        <mat-tab label="Anexos">
-
-          Anexos
-        </mat-tab>
+        <mat-tab label="Anexos"> Anexos </mat-tab>
       </mat-tab-group>
       <div>
         <button mat-button matStepperPrevious>Back</button>
@@ -150,25 +116,13 @@
       <ng-template matStepLabel>Innovación Docente</ng-template>
       <mat-tab-group mat-align-tabs="center">
         <mat-tab label="Datos Informativos">
-          Datos Informativos
-          1.3
-          1.4
-          2.2
-
+          Datos Informativos 1.3 1.4 2.2
         </mat-tab>
         <mat-tab label="Metodologia Innovacion Docente">
-
           Metodología Innovación Docente
         </mat-tab>
-        <mat-tab label="Cronograma">
-
-          Cronograma Innovación Docente
-        </mat-tab>
-        <mat-tab label="Materiales y Recursos">
-
-          Materiales y Recursos
-        </mat-tab>
-
+        <mat-tab label="Cronograma"> Cronograma Innovación Docente </mat-tab>
+        <mat-tab label="Materiales y Recursos"> Materiales y Recursos </mat-tab>
       </mat-tab-group>
       <div>
         <button mat-button matStepperPrevious>Back</button>
@@ -182,7 +136,12 @@
       <ng-template matStepLabel>Innovación Prototipo</ng-template>
       <mat-form-field appearance="fill">
         <mat-label>Address</mat-label>
-        <input matInput formControlName="thirdCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
+        <input
+          matInput
+          formControlName="thirdCtrl"
+          placeholder="Ex. 1 Main St, New York, NY"
+          required
+        />
       </mat-form-field>
       <div>
         <button mat-button matStepperPrevious>Back</button>
