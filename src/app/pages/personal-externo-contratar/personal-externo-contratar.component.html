@@ -18,260 +18,394 @@
                     <Sidebar
                     /> -->
     <section>
-      <form class="form" onSubmit=handleSubmit>
+      <form class="form" onSubmit="handleSubmit">
         <!-- <TitleBar /> -->
         <!-- <app-titlebar></app-titlebar> -->
         <div class="col-12">
-          <h4>
-            Personal Externo A Contratar
-          </h4>
+          <h4>Personal Externo A Contratar</h4>
           <br />
 
           <div class="container">
-            <div class="row">
-              <div class="col-1">
-                <label>
-                  Nro.
-                </label>
-              </div>
-
-              <div class="col-2">
-                <label>
-                  Perfil Requerido.
-                </label>
-              </div>
-
-              <div class="col-2">
-                <label>
-                  Función.
-                </label>
-              </div>
-
-              <div class="col-3">
-                <label>
-                  Actividades a desarrollar.
-                </label>
-              </div>
-              <div class="col-2">
-                <label>
-                  Tiempo de Contratacion Meses.
-                </label>
-              </div>
-              <div class="col-2">
-                <label>
-                  Número de personas a contratar.
-                </label>
-              </div>
-            </div>
-
             <hr />
 
             <div class="row">
-              <div class="col-1">
-                <label>
-                  01
-                </label>
-              </div>
+              <mat-form-field appearance="fill">
+                <mat-label>Perfil Requerido</mat-label>
+                <input
+                  required
+                  matInput
+                  type="text"
+                  placeholder="Ingresar Texto"
+                  class="form-control"
+                  name="perfilRequerido1"
+                  onChange="handleChange"
+                />
+              </mat-form-field>
 
-              <div class="col-2">
-                <input type="text" placeholder="Ingresar Texto" class="form-control" name="perfilRequerido1"
-                  onChange=handleChange value=formData.perfilRequerido1 />
-              </div>
+              <mat-form-field appearance="fill">
+                <mat-select
+                  id="funcion1"
+                  onChange="handleChange"
+                  name="funcion1"
+                  class="form-mat-select"
+                >
+                  <mat-option value="">-- Elija un Elemento --</mat-option>
+                  <mat-option value="ASISTENTE">ASISTENTE</mat-option>
+                  <mat-option value="TÉCNICO">TÉCNICO</mat-option>
+                  <mat-option value="ANALISTA">ANALISTA</mat-option>
+                  <mat-option value="CONSULTOR / ESPECIALISTA"
+                    >CONSULTOR / ESPECIALISTA</mat-option
+                  >
+                </mat-select>
+              </mat-form-field>
 
-              <div class="col-2">
-                <select id="funcion1" value=formData.funcion1 onChange=handleChange name="funcion1" class="form-select">
-                  <option value="">-- Elija un Elemento --</option>
-                  <option value="ASISTENTE">ASISTENTE</option>
-                  <option value="TÉCNICO">TÉCNICO</option>
-                  <option value="ANALISTA">ANALISTA</option>
-                  <option value="CONSULTOR / ESPECIALISTA">CONSULTOR / ESPECIALISTA</option>
-                </select>
-              </div>
+              <mat-form-field appearance="fill">
+                <input
+                  required
+                  matInput
+                  type="text"
+                  placeholder="Ingresar Texto"
+                  class="form-control"
+                  name="actividadesDesarrollar1"
+                  onChange="handleChange"
+                />
+              </mat-form-field>
 
-              <div class="col-3">
-                <input type="text" placeholder="Ingresar Texto" class="form-control" name="actividadesDesarrollar1"
-                  onChange=handleChange value=formData.actividadesDesarrollar1 />
-              </div>
+              <mat-form-field appearance="fill">
+                <mat-label>Tiempo Contratación</mat-label>
+                <input
+                  required
+                  matInput
+                  type="number"
+                  placeholder="00"
+                  min="0"
+                  class="form-control"
+                  name="tiempoContratacion1"
+                  onChange="handleChange"
+                />
+              </mat-form-field>
 
-              <div class="col-2">
-                <input type="number" placeholder="00" min="0" class="form-control" name="tiempoContratacion1"
-                  onChange=handleChange value=formData.tiempoContratacion1 />
-              </div>
-
-              <div class="col-2">
-                <input type="number" placeholder="00" min="0" class="form-control" name="personasContratar1"
-                  onChange=handleChange value=formData.personasContratar1 />
-              </div>
+              <mat-form-field appearance="fill">
+                <mat-label>Número de personas a contratar</mat-label>
+                <input
+                  required
+                  matInput
+                  type="number"
+                  placeholder="00"
+                  min="0"
+                  class="form-control"
+                  name="personasContratar1"
+                  onChange="handleChange"
+                />
+              </mat-form-field>
             </div>
 
             <br />
             <div class="row">
-              <div class="col-1">
-                <label>
-                  02
-                </label>
-              </div>
+              <mat-form-field appearance="fill">
+                <mat-label>Perfil Requerido</mat-label>
+                <input
+                  required
+                  matInput
+                  type="text"
+                  placeholder="Ingresar Texto"
+                  class="form-control"
+                  name="perfilRequerido2"
+                  onChange="handleChange"
+                />
+              </mat-form-field>
 
-              <div class="col-2">
-                <input type="text" placeholder="Ingresar Texto" class="form-control" name="perfilRequerido2"
-                  onChange=handleChange value=formData.perfilRequerido2 />
-              </div>
+              <mat-form-field appearance="fill">
+                <mat-select
+                  id="funcion2"
+                  onChange="handleChange"
+                  name="funcion2"
+                  class="form-mat-select"
+                >
+                  <mat-option value="">-- Elija un Elemento --</mat-option>
+                  <mat-option value="ASISTENTE">ASISTENTE</mat-option>
+                  <mat-option value="TÉCNICO">TÉCNICO</mat-option>
+                  <mat-option value="ANALISTA">ANALISTA</mat-option>
+                  <mat-option value="CONSULTOR / ESPECIALISTA"
+                    >CONSULTOR / ESPECIALISTA</mat-option
+                  >
+                </mat-select>
+              </mat-form-field>
 
-              <div class="col-2">
-                <select id="funcion2" value=formData.funcion2 onChange=handleChange name="funcion2" class="form-select">
-                  <option value="">-- Elija un Elemento --</option>
-                  <option value="ASISTENTE">ASISTENTE</option>
-                  <option value="TÉCNICO">TÉCNICO</option>
-                  <option value="ANALISTA">ANALISTA</option>
-                  <option value="CONSULTOR / ESPECIALISTA">CONSULTOR / ESPECIALISTA</option>
-                </select>
-              </div>
+              <mat-form-field appearance="fill">
+                <mat-label>Actividades a Desarrollar</mat-label>
+                <input
+                  required
+                  matInput
+                  type="text"
+                  placeholder="Ingresar Texto"
+                  class="form-control"
+                  name="actividadesDesarrollar2"
+                  onChange="handleChange"
+                />
+              </mat-form-field>
 
-              <div class="col-3">
-                <input type="text" placeholder="Ingresar Texto" class="form-control" name="actividadesDesarrollar2"
-                  onChange=handleChange value=formData.actividadesDesarrollar2 />
-              </div>
+              <mat-form-field appearance="fill">
+                <mat-label>Tiempo Contratación</mat-label>
+                <input
+                  required
+                  matInput
+                  type="number"
+                  placeholder="00"
+                  min="0"
+                  class="form-control"
+                  name="tiempoContratacion2"
+                  onChange="handleChange"
+                />
+              </mat-form-field>
 
-              <div class="col-2">
-                <input type="number" placeholder="00" min="0" class="form-control" name="tiempoContratacion2"
-                  onChange=handleChange value=formData.tiempoContratacion2 />
-              </div>
-
-              <div class="col-2">
-                <input type="number" placeholder="00" min="0" class="form-control" name="personasContratar2"
-                  onChange=handleChange value=formData.personasContratar2 />
-              </div>
-            </div>
-
-            <br />
-
-            <div class="row">
-              <div class="col-1">
-                <label>
-                  03
-                </label>
-              </div>
-
-              <div class="col-2">
-                <input type="text" placeholder="Ingresar Texto" class="form-control" name="perfilRequerido3"
-                  onChange=handleChange value=formData.perfilRequerido3 />
-              </div>
-
-              <div class="col-2">
-                <select id="funcion3" value=formData.funcion3 onChange=handleChange name="funcion3" class="form-select">
-                  <option value="">-- Elija un Elemento --</option>
-                  <option value="ASISTENTE">ASISTENTE</option>
-                  <option value="TÉCNICO">TÉCNICO</option>
-                  <option value="ANALISTA">ANALISTA</option>
-                  <option value="CONSULTOR / ESPECIALISTA">CONSULTOR / ESPECIALISTA</option>
-                </select>
-              </div>
-
-              <div class="col-3">
-                <input type="text" placeholder="Ingresar Texto" class="form-control" name="actividadesDesarrollar3"
-                  onChange=handleChange value=formData.actividadesDesarrollar3 />
-              </div>
-
-              <div class="col-2">
-                <input type="number" placeholder="00" min="0" class="form-control" name="tiempoContratacion3"
-                  onChange=handleChange value=formData.tiempoContratacion3 />
-              </div>
-
-              <div class="col-2">
-                <input type="number" placeholder="00" min="0" class="form-control" name="personasContratar3"
-                  onChange=handleChange value=formData.personasContratar3 />
-              </div>
-            </div>
-
-            <br />
-
-            <div class="row">
-              <div class="col-1">
-                <label>
-                  04
-                </label>
-              </div>
-
-              <div class="col-2">
-                <input type="text" placeholder="Ingresar Texto" class="form-control" name="perfilRequerido4"
-                  onChange=handleChange value=formData.perfilRequerido4 />
-              </div>
-
-              <div class="col-2">
-                <select id="funcion4" value=formData.funcion4 onChange=handleChange name="funcion4" class="form-select">
-                  <option value="">-- Elija un Elemento --</option>
-                  <option value="ASISTENTE">ASISTENTE</option>
-                  <option value="TÉCNICO">TÉCNICO</option>
-                  <option value="ANALISTA">ANALISTA</option>
-                  <option value="CONSULTOR / ESPECIALISTA">CONSULTOR / ESPECIALISTA</option>
-                </select>
-              </div>
-
-              <div class="col-3">
-                <input type="text" placeholder="Ingresar Texto" class="form-control" name="actividadesDesarrollar4"
-                  onChange=handleChange value=formData.actividadesDesarrollar4 />
-              </div>
-
-              <div class="col-2">
-                <input type="number" placeholder="00" min="0" class="form-control" name="tiempoContratacion4"
-                  onChange=handleChange value=formData.tiempoContratacion4 />
-              </div>
-
-              <div class="col-2">
-                <input type="number" placeholder="00" min="0" class="form-control" name="personasContratar4"
-                  onChange=handleChange value=formData.personasContratar4 />
-              </div>
+              <mat-form-field appearance="fill">
+                <mat-label>Número de Personas a Contratar</mat-label>
+                <input
+                  required
+                  matInput
+                  type="number"
+                  placeholder="00"
+                  min="0"
+                  class="form-control"
+                  name="personasContratar2"
+                  onChange="handleChange"
+                />
+              </mat-form-field>
             </div>
 
             <br />
 
             <div class="row">
-              <div class="col-1">
-                <label>
-                  05
-                </label>
-              </div>
+              <mat-form-field appearance="fill">
+                <mat-label>Perfil Requerido</mat-label>
+                <input
+                  required
+                  matInput
+                  type="text"
+                  placeholder="Ingresar Texto"
+                  class="form-control"
+                  name="perfilRequerido3"
+                  onChange="handleChange"
+                />
+              </mat-form-field>
 
-              <div class="col-2">
-                <input type="text" placeholder="Ingresar Texto" class="form-control" name="perfilRequerido5"
-                  onChange=handleChange value=formData.perfilRequerido5 />
-              </div>
+              <mat-form-field appearance="fill">
+                <mat-select
+                  id="funcion3"
+                  onChange="handleChange"
+                  name="funcion3"
+                  class="form-mat-select"
+                >
+                  <mat-option value="">-- Elija un Elemento --</mat-option>
+                  <mat-option value="ASISTENTE">ASISTENTE</mat-option>
+                  <mat-option value="TÉCNICO">TÉCNICO</mat-option>
+                  <mat-option value="ANALISTA">ANALISTA</mat-option>
+                  <mat-option value="CONSULTOR / ESPECIALISTA"
+                    >CONSULTOR / ESPECIALISTA</mat-option
+                  >
+                </mat-select>
+              </mat-form-field>
 
-              <div class="col-2">
-                <select id="funcion5" value=formData.funcion5 onChange=handleChange name="funcion5" class="form-select">
-                  <option value="">-- Elija un Elemento --</option>
-                  <option value="ASISTENTE">ASISTENTE</option>
-                  <option value="TÉCNICO">TÉCNICO</option>
-                  <option value="ANALISTA">ANALISTA</option>
-                  <option value="CONSULTOR / ESPECIALISTA">CONSULTOR / ESPECIALISTA</option>
-                </select>
-              </div>
+              <mat-form-field appearance="fill">
+                <mat-label>Actividades a Desarrollar</mat-label>
+                <input
+                  required
+                  matInput
+                  type="text"
+                  placeholder="Ingresar Texto"
+                  class="form-control"
+                  name="actividadesDesarrollar3"
+                  onChange="handleChange"
+                />
+              </mat-form-field>
 
-              <div class="col-3">
-                <input type="text" placeholder="Ingresar Texto" class="form-control" name="actividadesDesarrollar5"
-                  onChange=handleChange value=formData.actividadesDesarrollar5 />
-              </div>
+              <mat-form-field appearance="fill">
+                <mat-label>Tiempo Contratación</mat-label>
+                <input
+                  required
+                  matInput
+                  type="number"
+                  placeholder="00"
+                  min="0"
+                  class="form-control"
+                  name="tiempoContratacion3"
+                  onChange="handleChange"
+                />
+              </mat-form-field>
 
-              <div class="col-2">
-                <input type="number" placeholder="00" min="0" class="form-control" name="tiempoContratacion5"
-                  onChange=handleChange value=formData.tiempoContratacion5 />
-              </div>
-
-              <div class="col-2">
-                <input type="number" placeholder="00" min="0" class="form-control" name="personasContratar5"
-                  onChange=handleChange value=formData.personasContratar5 />
-              </div>
+              <mat-form-field appearance="fill">
+                <mat-label>Número Personas a Contratar</mat-label>
+                <input
+                  required
+                  matInput
+                  type="number"
+                  placeholder="00"
+                  min="0"
+                  class="form-control"
+                  name="personasContratar3"
+                  onChange="handleChange"
+                />
+              </mat-form-field>
             </div>
 
+            <br />
+
+            <div class="row">
+              <mat-form-field appearance="fill">
+                <mat-label>Perfil Requerido</mat-label>
+                <input
+                  required
+                  matInput
+                  type="text"
+                  placeholder="Ingresar Texto"
+                  class="form-control"
+                  name="perfilRequerido4"
+                  onChange="handleChange"
+                />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-select
+                  id="funcion4"
+                  value="formData.funcion4"
+                  onChange="handleChange"
+                  name="funcion4"
+                  class="form-mat-select"
+                >
+                  <mat-option value="">-- Elija un Elemento --</mat-option>
+                  <mat-option value="ASISTENTE">ASISTENTE</mat-option>
+                  <mat-option value="TÉCNICO">TÉCNICO</mat-option>
+                  <mat-option value="ANALISTA">ANALISTA</mat-option>
+                  <mat-option value="CONSULTOR / ESPECIALISTA"
+                    >CONSULTOR / ESPECIALISTA</mat-option
+                  >
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Actividades a Desarrollar</mat-label>
+                <input
+                  required
+                  matInput
+                  type="text"
+                  placeholder="Ingresar Texto"
+                  class="form-control"
+                  name="actividadesDesarrollar4"
+                  onChange="handleChange"
+                />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Tiempo de Contratación Meses</mat-label>
+                <input
+                  required
+                  matInput
+                  type="number"
+                  placeholder="00"
+                  min="0"
+                  class="form-control"
+                  name="tiempoContratacion4"
+                  onChange="handleChange"
+                />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Número de Personas a Contratar</mat-label>
+                <input
+                  required
+                  matInput
+                  type="number"
+                  placeholder="00"
+                  min="0"
+                  class="form-control"
+                  name="personasContratar4"
+                  onChange="handleChange"
+                />
+              </mat-form-field>
+            </div>
+
+            <br />
+
+            <div class="row">
+              <mat-form-field appearance="fill">
+                <mat-label>Perfil Requerido</mat-label>
+                <input
+                  required
+                  matInput
+                  type="text"
+                  placeholder="Ingresar Texto"
+                  class="form-control"
+                  name="perfilRequerido5"
+                  onChange="handleChange"
+                />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-select
+                  id="funcion5"
+                  value="formData.funcion5"
+                  onChange="handleChange"
+                  name="funcion5"
+                  class="form-mat-select"
+                >
+                  <mat-option value="">-- Elija un Elemento --</mat-option>
+                  <mat-option value="ASISTENTE">ASISTENTE</mat-option>
+                  <mat-option value="TÉCNICO">TÉCNICO</mat-option>
+                  <mat-option value="ANALISTA">ANALISTA</mat-option>
+                  <mat-option value="CONSULTOR / ESPECIALISTA"
+                    >CONSULTOR / ESPECIALISTA</mat-option
+                  >
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Actividades a Desarrollar</mat-label>
+                <input
+                  required
+                  matInput
+                  type="text"
+                  placeholder="Ingresar Texto"
+                  class="form-control"
+                  name="actividadesDesarrollar5"
+                  onChange="handleChange"
+                />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Tiempo de Contratación</mat-label>
+                <input
+                  required
+                  matInput
+                  type="number"
+                  placeholder="00"
+                  min="0"
+                  class="form-control"
+                  name="tiempoContratacion5"
+                  onChange="handleChange"
+                />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Número de personas a contratar</mat-label>
+                <input
+                  required
+                  matInput
+                  type="number"
+                  placeholder="00"
+                  min="0"
+                  class="form-control"
+                  name="personasContratar5"
+                  onChange="handleChange"
+                />
+              </mat-form-field>
+            </div>
           </div>
-
         </div>
 
         <br />
 
-        <button class="btn btn-primary">
-          Enviar Información
-        </button>
+        <button class="btn btn-primary">Enviar Información</button>
       </form>
     </section>
     <!-- </as-split-area>
