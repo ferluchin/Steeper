@@ -4,7 +4,9 @@
 <mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
   <!-- INFORMACION GENERAL -->
   <mat-step [stepControl]="informacionGeneralFormGroup">
-
+      <ng-template matStepLabel>
+        Informacion General 
+      </ng-template>
 
     <mat-tab-group mat-align-tabs="center">
       <mat-tab label="Datos Informativos">
