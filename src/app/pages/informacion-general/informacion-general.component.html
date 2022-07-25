@@ -8,10 +8,31 @@
       Informacion General
     </ng-template>
 
+
+
+<!--
+    <mat-tab-group [selectedIndex]="selectedIndex">
+      <mat-tab label="titulo" *ngFor="let number of [0,1,2,3,4];let i=index; ">
+        <ng-template mat-tab-label>
+        </ng-template>
+        content{{number}}
+        <br>
+        <button (click)="previousStep()">
+          <mat-icon>arrow_back_ios</mat-icon>
+        </button>
+        <button (click)="nextStep()">
+          <mat-icon>arrow_forward_ios</mat-icon>
+        </button>
+      </mat-tab>
+    </mat-tab-group> -->
+
     <mat-tab-group mat-align-tabs="center">
       <mat-tab label="Datos Informativos">
         Datos Informativos
         <app-datos-generales> </app-datos-generales>
+        <button mat-raised-button (click)="stepper.next()">
+          Siguiente
+        </button>
       </mat-tab>
       <mat-tab label="Áreas Conocimiento">
         Áreas Conocimiento
@@ -40,8 +61,16 @@
         <app-transferencia-conocimientos-general></app-transferencia-conocimientos-general>
       </mat-tab>
 
-      <mat-tab label="Bibliografía"> Bibliografía </mat-tab>
-      <mat-tab label="Observaciones"> Observaciones </mat-tab>
+      <mat-tab label="Bibliografía">
+
+        <app-bibliografia-general></app-bibliografia-general>
+
+      </mat-tab>
+      <mat-tab label="Observaciones">
+
+        <app-observaciones-general></app-observaciones-general>
+
+      </mat-tab>
     </mat-tab-group>
   </mat-step>
 
@@ -137,12 +166,7 @@
       <ng-template matStepLabel>Innovación Prototipo</ng-template>
       <mat-form-field appearance="fill">
         <mat-label>Address</mat-label>
-        <input
-          matInput
-          formControlName="thirdCtrl"
-          placeholder="Ex. 1 Main St, New York, NY"
-          required
-        />
+        <input matInput formControlName="thirdCtrl" placeholder="Ex. 1 Main St, New York, NY" required />
       </mat-form-field>
       <div>
         <button mat-button matStepperPrevious>Back</button>

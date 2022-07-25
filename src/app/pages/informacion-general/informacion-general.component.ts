@@ -71,4 +71,27 @@ export class InformacionGeneralComponent {
 
   }
 
+  selectedIndex: number = 0;
+  maxNumberOfTabs: number = 5;
+  nextStep() {
+    if (this.selectedIndex != this.maxNumberOfTabs) {
+      this.selectedIndex = this.selectedIndex + 1;
+    }
+    console.log(this.selectedIndex);
+  }
+
+  previousStep() {
+    if (this.selectedIndex != 0) {
+      this.selectedIndex = this.selectedIndex - 1;
+    }
+    console.log(this.selectedIndex);
+  }
+
+  isEditable = false;
+  informacionGeneralLinealFormGroup = this._formBuilder.group({
+    firstCtrl: ['', Validators.required],
+  });
+  secondHFormGroup = this._formBuilder.group({
+    secondHCtrl: ['', Validators.required],
+  });
 }

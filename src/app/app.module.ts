@@ -38,10 +38,14 @@ import { CronogramaEspEComponent } from './pages/cronograma-esp-e/cronograma-esp
 import { TextFieldModule } from '@angular/cdk/text-field';
 
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatFooterRow } from '@angular/material/table';
+import { MatFooterCell } from '@angular/material/table';
 import { AreasConocimientoComponent } from './pages/areas-conocimiento/areas-conocimiento.component';
 import { DatosGeneralesComponent } from './pages/datos-generales/datos-generales.component';
 import { DatosInformativosInvestigacionComponent } from './pages/datos-informativos-investigacion/datos-informativos-investigacion.component';
 import { TransferenciaConocimientosGeneralComponent } from './pages/transferencia-conocimientos-general/transferencia-conocimientos-general.component';
+import { ObservacionesGeneralComponent } from './pages/observaciones-general/observaciones-general.component';
+import { BibliografiaGeneralComponent } from './pages/bibliografia-general/bibliografia-general.component';
 //import { MAT_MOMENT_DATE_FORMATS, MomentDateAdapter } from '@angular/material-moment-adapter';
 //import { MatMomentDateModule } from "@angular/material-moment-adapter";
 
@@ -63,7 +67,9 @@ import { TransferenciaConocimientosGeneralComponent } from './pages/transferenci
     AreasConocimientoComponent,
     DatosGeneralesComponent,
     DatosInformativosInvestigacionComponent,
-    TransferenciaConocimientosGeneralComponent
+    TransferenciaConocimientosGeneralComponent,
+    ObservacionesGeneralComponent,
+    BibliografiaGeneralComponent,
   ],
   imports: [
     BrowserModule,
@@ -86,6 +92,8 @@ import { TransferenciaConocimientosGeneralComponent } from './pages/transferenci
     //MatMomentDateModule,
     TextFieldModule,
     MatGridListModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
