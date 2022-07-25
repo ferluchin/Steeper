@@ -41,6 +41,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { AreasConocimientoComponent } from './pages/areas-conocimiento/areas-conocimiento.component';
 import { DatosGeneralesComponent } from './pages/datos-generales/datos-generales.component';
 import { DatosInformativosInvestigacionComponent } from './pages/datos-informativos-investigacion/datos-informativos-investigacion.component';
+import { TransferenciaConocimientosGeneralComponent } from './pages/transferencia-conocimientos-general/transferencia-conocimientos-general.component';
 //import { MAT_MOMENT_DATE_FORMATS, MomentDateAdapter } from '@angular/material-moment-adapter';
 //import { MatMomentDateModule } from "@angular/material-moment-adapter";
 
@@ -61,7 +62,8 @@ import { DatosInformativosInvestigacionComponent } from './pages/datos-informati
     CronogramaEspEComponent,
     AreasConocimientoComponent,
     DatosGeneralesComponent,
-    DatosInformativosInvestigacionComponent
+    DatosInformativosInvestigacionComponent,
+    TransferenciaConocimientosGeneralComponent
   ],
   imports: [
     BrowserModule,

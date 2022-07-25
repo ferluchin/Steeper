@@ -8,6 +8,7 @@ import { PersonalExternoContratarComponent } from './pages/personal-externo-cont
 import { PersonalExternoCooperanteComponent } from './pages/personal-externo-cooperante/personal-externo-cooperante.component';
 import { PersonalInternoComponent } from './pages/personal-interno/personal-interno.component';
 import { ResumenPresupuestoComponent } from './pages/resumen-presupuesto/resumen-presupuesto.component';
+import { TransferenciaConocimientosGeneralComponent } from './pages/transferencia-conocimientos-general/transferencia-conocimientos-general.component';
 
 const routes: Routes = [
 
@@ -19,6 +20,8 @@ const routes: Routes = [
   { path: 'informacion-tecnica-proyecto', component: InformacionTecnicaProyectoComponent },
   { path: 'resumen-presupuesto', component: ResumenPresupuestoComponent },
   { path: 'datos-generales', component: DatosGeneralesComponent },
+  { path: 'transferencia', component: TransferenciaConocimientosGeneralComponent },
+
 
 ];
 

@@ -1,0 +1,68 @@
+<div class="row">
+  <div class="col-4">
+    <label>
+      Artículo Científico
+    </label>
+  </div>
+  <mat-form-field appearance="fill">
+    <mat-label>Artículo Científico</mat-label>
+    <mat-select id="articuloCientifico" value={formData.articuloCientifico} onChange={handleChange}
+      name="articuloCientifico" class="form-select">
+      <mat-option value="">-- Elija un Elemento --</mat-option>
+      <mat-option value="SI">SI</mat-option>
+      <mat-option value="NO">NO</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<br />
+<div class="row">
+  <div class="col-4">
+    <label>
+      Prototipo
+    </label>
+  </div>
+  <mat-form-field appearance="fill">
+    <mat-label>Prototipo</mat-label>
+    <mat-select id="prototipo" value={formData.prototipo} onChange={handleChange} name="prototipo" class="form-select">
+      <mat-option value="">-- Elija un Elemento --</mat-option>
+      <mat-option value="SI">SI</mat-option>
+      <mat-option value="NO">NO</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<br />
+<div class="row">
+
+  <div class="col-4">
+    <label>
+      Registro de Propiedad Industrial
+    </label>
+  </div>
+  <mat-form-field appearance="fill">
+    <mat-label>Registro Propiedad Industrial</mat-label>
+    <mat-select id="registroPropiedadIndustrial" value={formData.registroPropiedadIndustrial} onChange={handleChange}
+      name="registroPropiedadIndustrial" class="form-select">
+      <mat-option value="">-- Elija un Elemento --</mat-option>
+      <mat-option value="SI">SI</mat-option>
+      <mat-option value="NO">NO</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<br />
+<div class="row">
+
+  <div class="col-4">
+    <label>
+      Otros
+    </label>
+  </div>
+<mat-form-field class="form-field" appearance="fill">
+  <input matInput required type="text" placeholder="Detallar si aplica. " class="form--input"
+    name="otrosTransferenciaConocimiento" onChange={handleChange}>
+</mat-form-field>
+
+
+
+</div>
+
+<br />
